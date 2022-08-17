@@ -20,5 +20,7 @@ namespace Hospital.Services
 
         // 科室资源
         Task<IEnumerable<Department>> GetDepartments();
+
+        Task<bool> SaveAsync();
     }
 }
