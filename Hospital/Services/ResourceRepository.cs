@@ -66,5 +66,11 @@ namespace Hospital.Services
                 .Where(o => o.Id == orderId)
                 .FirstOrDefaultAsync();
         }
+
+        // 科室资源
+        public async Task<IEnumerable<Department>> GetDepartments()
+        {
+            return await _context.Departments.ToListAsync();
+        }
     }
 }
