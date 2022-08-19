@@ -11,9 +11,10 @@ namespace Hospital.Models
     public class MedicalEquipment
     {
         [Key]
+        [MaxLength(20)]
         [Column("ID")]
         [Required]
-        public Guid Id { get; set; } // 设备编号，Guid
+        public string Id { get; set; } // 设备编号，string
         [Column("NAME")]
         [Required]
         public string Name { get; set; } // 设备名称

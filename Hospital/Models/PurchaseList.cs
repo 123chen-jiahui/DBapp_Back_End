@@ -1,33 +1,45 @@
-﻿using System;
+﻿using Hospital.Dtos;
+using Hospital.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Hospital.Models
 {
     [Table("PURCHASE_LISTS")]
     public class PurchaseList
     {
+        // 主键 采购清单ID
         [Key]
         [Required]
         [Column("ID")]
         public Guid Id { get; set; }
+
+        // 清单创建日期
         [Required]
         [Column("DATE")]
         public DateTime Date { get; set; }
+
+        // 此次采购总的花费
         [Required]
-        [Column("COST", TypeName = "decimal(18, 2)")]
+        [Column("COST",TypeName = "decimal(18,2)")]
         public decimal Cost { get; set; }
+
+        // 引用Staff的外码
         [Required]
         [Column("STAFF_ID")]
-        public int StaffId { get; set; } // 采购负责人
-
-
+        public int StaffId { get; set; }
+        
         [ForeignKey("StaffId")]
         public Staff Staff { get; set; }
 
-        public ICollection<PurchaseListItem> PurchaseListItems { get; set; } = new List<PurchaseListItem>();
+        // 备注
+        [MaxLength(50)]
+        [Column("COMMENT")]
+        public string Comment { get; set; }
+
+        // 采购内容
+        public ICollection<PurchaseListItem> PurchaseListItems { get; set; }
     }
 }
