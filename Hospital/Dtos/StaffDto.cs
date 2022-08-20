@@ -8,6 +8,7 @@ namespace Hospital.Dtos
     // 用于返回展示
     public class StaffDto
     {
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public int age { get; set; }

@@ -66,6 +66,7 @@ namespace Hospital.Services
             result.Where(s => s.DepartmentId == departmentId);
             return result.ToList();*/
             IQueryable<Staff> result = _context.Staff;
+            result = result.Where(r => r.DepartmentId == departmentId);
 
             /*// pagination
             // skip
