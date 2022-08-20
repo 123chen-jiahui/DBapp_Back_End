@@ -20,6 +20,7 @@ namespace Hospital.Services
 
         // 挂号
         Task AddRegistrationAsync(Registration registration);
+      
         Task<Registration> GetRegistrationByRegistrationId(Guid registrationId);
         Task<IEnumerable<Registration>> GetRegistrationsAsync(int patientId); // 查看某个病人的历史挂号信息
         // Task<Registration> GetRegistrationByRegistrationId(Guid registrationId);
@@ -27,6 +28,19 @@ namespace Hospital.Services
         // waitline
         Task AddWaitLineAsync(WaitLine waitLine);
         Task<IEnumerable<WaitLine>> GetWaitLinesAsync(int staffId, int day);
+
+
+        //请假
+        Task AddBreakAsync(Break breakk);
+        Task<IEnumerable<Break>> GetBreaksByStaffIdAsync(int staffId);
+        Task<IEnumerable<Break>> GetUnapprovedBreaksAsync();
+        Task<Break> GetBreakByIdAsync(Guid Id);
+
+        //辞职
+        Task AddResignAsync(Resign resign);
+        Task<IEnumerable<Resign>> GetResignsByStaffIdAsync(int staffId);
+        Task<IEnumerable<Resign>> GetUnapprovedResignsAsync();
+        Task<Resign> GetResignByIdAsync(Guid Id);
         Task<bool> SaveAsync();
     }
 }

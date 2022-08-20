@@ -17,6 +17,11 @@ namespace Hospital.Services
         {
             _context = context;
         }
+        public void DeleteStaff(Staff staff)
+        {
+            _context.Staff.Remove(staff);
+        }
+
         public async Task<bool> PatientExistsByGlobalIdAsync(string patientGlobalId)
         {
             return await _context.Patients.AnyAsync(p => p.GlobalId == patientGlobalId);
@@ -49,7 +54,6 @@ namespace Hospital.Services
         {
             return await _context.Patients.Where(p => p.Id == patientId).FirstOrDefaultAsync(); // 一定要加FirstOrDefault来执行sql语句
         }
-
         public async Task<bool> SaveAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);

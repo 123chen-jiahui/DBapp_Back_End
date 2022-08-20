@@ -9,6 +9,7 @@ namespace Hospital.Services
 {
     public interface IUserRepository
     {
+        void DeleteStaff(Staff staff);
         Task<bool> PatientExistsByGlobalIdAsync(string patientGlobalId); // 根据身份证号查找病人是否存在
         Task<bool> PatientExistsByPatientIdAsync(int patientId);
         Task<bool> StaffExistsByGlobalIdAsync(string staffGlobalId);

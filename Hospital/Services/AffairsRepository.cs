@@ -59,7 +59,14 @@ namespace Hospital.Services
         {
             await _context.Registrations.AddAsync(registration);
         }
-
+        public async Task AddBreakAsync(Break breakk)
+        {
+            await _context.Breaks.AddAsync(breakk);
+        }
+        public async Task AddResignAsync(Resign resign)
+        {
+            await _context.Resigns.AddAsync(resign);
+        }
         public async Task<Registration> GetRegistrationByRegistrationId(Guid registrationId)
         {
             return await _context.Registrations.Where(r => r.Id == registrationId).FirstOrDefaultAsync();
@@ -84,10 +91,46 @@ namespace Hospital.Services
             return await res.ToListAsync();
             // return await _context.WaitLines.Where(wl => wl.StaffId == staffId && wl.Day == day).ToListAsync();
         }
+        public async Task<IEnumerable<Break>> GetBreaksByStaffIdAsync(int staffId)
+        {
+            IQueryable<Break> res = _context.Breaks.Where(wl => wl.StaffId == staffId);
+            res = res.OrderBy(r => r.FromTime);
+            return await res.ToListAsync();
+        }
+        public async Task<IEnumerable<Break>> GetUnapprovedBreaksAsync()
+        {
+            IQueryable<Break> res = _context.Breaks.Where(wl => wl.State==BreakState.waitForApproval);
+            res = res.OrderBy(r => r.FromTime);
+            return await res.ToListAsync();
+        }
 
+        public async Task<Break>GetBreakByIdAsync(Guid Id)
+        {
+            return await _context.Breaks.Where(wl => wl.Id == Id).FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<Resign>> GetResignsByStaffIdAsync(int staffId)
+        {
+            IQueryable<Resign> res = _context.Resigns.Where(wl => wl.StaffId == staffId);
+            res = res.OrderBy(r => r.Time);
+            return await res.ToListAsync();
+        }
+
+        public async Task<IEnumerable<Resign>> GetUnapprovedResignsAsync()
+        {
+            IQueryable<Resign> res = _context.Resigns.Where(wl => wl.State ==ResignState.waitForApproval);
+            res = res.OrderBy(r => r.Time);
+            return await res.ToListAsync();
+        }
+        public async Task<Resign> GetResignByIdAsync(Guid Id)
+        {
+            return await _context.Resigns.Where(wl => wl.Id == Id).FirstOrDefaultAsync();
+        }
         public async Task<bool> SaveAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);
         }
+
+
     }
 }
