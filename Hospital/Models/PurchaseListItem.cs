@@ -18,7 +18,7 @@ namespace Hospital.Models
         //[Key]
         [Required]
         [Column("PURCHASE_LIST_ITEM_TYPE")]
-        public PurchaseListItemType PurchaseListItemType { get; set; }
+        public string PurchaseListItemType { get; set; }
 
         // 采购的物品的名字
         [MaxLength(100)]

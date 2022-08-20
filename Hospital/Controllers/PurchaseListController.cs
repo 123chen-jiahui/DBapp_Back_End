@@ -12,7 +12,7 @@ using System.Linq;
 namespace Hospital.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize(Roles="Admin")]
+    //[Authorize(Roles="Admin")]
     [ApiController]
     public class PurchaseListController : ControllerBase
     {

@@ -63,7 +63,7 @@ namespace Hospital.Services
             if(purchaseListItem==null)
                 throw new ArgumentNullException(nameof(purchaseListItem));
 
-            if (purchaseListItem.PurchaseListItemType == PurchaseListItemType.MedicineEquipment)
+            if (purchaseListItem.PurchaseListItemType == PurchaseListItemType.Medicine.ToString("G"))
             {
                 var medicineitem = _context.Medicine.Where(t => t.Id == purchaseListItem.ItemId).FirstOrDefault();
                 if(medicineitem == null)
@@ -83,7 +83,7 @@ namespace Hospital.Services
                     medicineitem.Inventory += (int)purchaseListItem.ItemCount;
                 }
             }
-            else if(purchaseListItem.PurchaseListItemType == PurchaseListItemType.MedicineEquipment)
+            else if(purchaseListItem.PurchaseListItemType == PurchaseListItemType.MedicialEquipment.ToString("G"))
             {
                 var medicineequip = _context.MedicalEquipments.Where(me => me.Id == purchaseListItem.ItemId).FirstOrDefault();
                 if(medicineequip == null)

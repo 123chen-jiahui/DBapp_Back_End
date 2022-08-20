@@ -2,7 +2,7 @@
 {
     public enum PurchaseListItemType
     {
-        MedicineEquipment, // 药品
-        MedicalEquipment  // 医疗器械
+        Medicine, // 药品
+        MedicialEquipment  // 医疗器械
     }
 }
