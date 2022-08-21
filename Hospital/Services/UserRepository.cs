@@ -15,7 +15,7 @@ namespace Hospital.Services
         private readonly AppDbContext _context;
         public UserRepository(AppDbContext context)
         {
-            _context = context;
+            _context = context; 
         }
         public void DeleteStaff(Staff staff)
         {
