@@ -2,6 +2,7 @@
 using Hospital.Dtos;
 using Hospital.ResourceParameter;
 using Hospital.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,16 @@ namespace Hospital.Controllers
             }
             var staffDto = _mapper.Map<IEnumerable<StaffDto>>(staffsFromRepo);
             return Ok(staffDto);
+        }
+
+        /* 获取员工基本信息 */
+        [HttpGet("{staffId}")]
+        [Authorize]
+        public async Task<IActionResult> GetStaffById([FromRoute] int staffId)
+        {
+            var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
+
+            return Ok(_mapper.Map<StaffDto>(staff));
         }
     }
 }

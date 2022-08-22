@@ -24,6 +24,8 @@ namespace Hospital.Database
         public DbSet<Staff> Staff { get; set; }
         public DbSet<Ward> Wards { get; set; }
         public DbSet<Registration> Registrations { get; set; }
+        public DbSet<Break> Breaks { get; set; }
+        public DbSet<Resign> Resigns { get; set; }
         public DbSet<MedicalEquipment> MedicalEquipments { get; set; }
         public DbSet<Medicine> Medicine { get; set; }
         public DbSet<PurchaseList> PurchaseLists { get; set; }

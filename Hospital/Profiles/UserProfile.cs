@@ -32,7 +32,21 @@ namespace Hospital.Profiles
                 return "男";
             }
         }
-
+        public string GetRole(Role role)
+        {
+            if (role == Role.Admin)
+            {
+                return "管理员";
+            }
+            else if(role == Role.Doctor)
+            {
+                return "医生";
+            }
+            else 
+            {
+                return "采购员";
+            }
+        }
         public UserProfile()
         {
             CreateMap<RegisterForPatientDto, Patient>();
@@ -42,6 +56,14 @@ namespace Hospital.Profiles
                 .ForMember(
                     dest => dest.age,
                     opt => opt.MapFrom(src => GetAge(src.Birthday))
+                    )
+                .ForMember(
+                    dest => dest.Gender,
+                    opt => opt.MapFrom(src => GetGender(src.Gender))
+                    )
+                 .ForMember(
+                    dest => dest.Gender,
+                    opt => opt.MapFrom(src => GetRole(src.Role))
             );
             CreateMap<GuahaoDto, Registration>();
 

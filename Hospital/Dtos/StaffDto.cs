@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,5 +13,7 @@ namespace Hospital.Dtos
         public string Name { get; set; }
 
         public int age { get; set; }
+        public string Gender { get; set; }
+        public string Role { get; set; }
     }
 }

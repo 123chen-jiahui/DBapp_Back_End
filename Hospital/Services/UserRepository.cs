@@ -15,8 +15,13 @@ namespace Hospital.Services
         private readonly AppDbContext _context;
         public UserRepository(AppDbContext context)
         {
-            _context = context;
+            _context = context; 
         }
+        public void DeleteStaff(Staff staff)
+        {
+            _context.Staff.Remove(staff);
+        }
+
         public async Task<bool> PatientExistsByGlobalIdAsync(string patientGlobalId)
         {
             return await _context.Patients.AnyAsync(p => p.GlobalId == patientGlobalId);
