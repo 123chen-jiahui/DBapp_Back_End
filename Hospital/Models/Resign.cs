@@ -14,7 +14,7 @@ namespace Hospital.Models
         [Key]
         [Required]
         [Column("ID")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         [Column("TIME")]
@@ -23,12 +23,11 @@ namespace Hospital.Models
         [Required]
         [Column("STAFF_ID")]
         public int StaffId { get; set; }
-        [ForeignKey("StaffId")]
         public Staff Staff { get; set; }
 
         [Column("ADMIN_ID")]
         public int AdminId { get; set; }
-        [ForeignKey("StaffId")]
+ 
         public Staff Admin { get; set; }
 
         [Required]

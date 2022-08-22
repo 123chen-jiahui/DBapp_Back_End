@@ -62,7 +62,7 @@ namespace Hospital.Profiles
                     opt => opt.MapFrom(src => GetGender(src.Gender))
                     )
                  .ForMember(
-                    dest => dest.Gender,
+                    dest => dest.Role,
                     opt => opt.MapFrom(src => GetRole(src.Role))
             );
             CreateMap<GuahaoDto, Registration>();

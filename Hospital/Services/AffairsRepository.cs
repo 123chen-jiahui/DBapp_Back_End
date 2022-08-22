@@ -104,7 +104,7 @@ namespace Hospital.Services
             return await res.ToListAsync();
         }
 
-        public async Task<Break>GetBreakByIdAsync(Guid Id)
+        public async Task<Break>GetBreakByIdAsync(string Id)
         {
             return await _context.Breaks.Where(wl => wl.Id == Id).FirstOrDefaultAsync();
         }
@@ -122,7 +122,7 @@ namespace Hospital.Services
             res = res.OrderBy(r => r.Time);
             return await res.ToListAsync();
         }
-        public async Task<Resign> GetResignByIdAsync(Guid Id)
+        public async Task<Resign> GetResignByIdAsync(string Id)
         {
             return await _context.Resigns.Where(wl => wl.Id == Id).FirstOrDefaultAsync();
         }

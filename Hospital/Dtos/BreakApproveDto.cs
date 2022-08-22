@@ -9,7 +9,7 @@ namespace Hospital.Dtos
     // 换句话说，不要带双引号！！！
     public class BreakApproveDto
     {
-        public Guid Id { get; set; }   
+        public string Id { get; set; }   
         public BreakState State { get; set; }  //前端提供选择,2通过，3拒绝
     }
 }

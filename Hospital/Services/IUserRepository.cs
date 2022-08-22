@@ -23,6 +23,7 @@ namespace Hospital.Services
         Task<ShoppingCart> GetShoppingCartByPatientIdAsync(int patientId);
         void CreateShoppingCart(ShoppingCart shoppingCart);
         Task AddOrderAsync(Order order);
+        Task<Staff> GetAdminByAsync();
         Task<bool> SaveAsync();
         Task<PaginationList<Order>> GetOrdersByPatientIdAsync(int patientId, int pageNumber, int pageSize);
     }

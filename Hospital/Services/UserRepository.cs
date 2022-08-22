@@ -54,6 +54,11 @@ namespace Hospital.Services
         {
             return await _context.Patients.Where(p => p.Id == patientId).FirstOrDefaultAsync(); // 一定要加FirstOrDefault来执行sql语句
         }
+        /* 获取某个管理员id，因为外键不能为空 */
+        public async Task<Staff> GetAdminByAsync()
+        {
+            return await _context.Staff.Where(p => p.Role == Role.Admin).FirstOrDefaultAsync(); // 一定要加FirstOrDefault来执行sql语句
+        }
         public async Task<bool> SaveAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);

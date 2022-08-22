@@ -28,11 +28,13 @@ namespace Hospital.Controllers
         private readonly IHttpContextAccessor _httpContextAccessor;
         public ResignController(
             IAffairsRepository affairsRepository,
+            IUserRepository userRepository,
             IMapper mapper,
             IHttpClientFactory httpClientFactory,
             IHttpContextAccessor httpContextAccessor
         )
         {
+            _userRepository = userRepository;
             _affairsRepository = affairsRepository;
             _mapper = mapper;
             _httpClientFactory = httpClientFactory;
@@ -50,14 +52,16 @@ namespace Hospital.Controllers
             ResignState state = ResignState.waitForApproval;
             DateTime time = DateTime.Now;
             string reason = resignForCreationDto.Reason;
+            var admin = await _userRepository.GetAdminByAsync();
 
             var resign = new Resign()            //break有歧义所以用breakk
             {
-                Id = Guid.NewGuid(),
+                Id = Guid.NewGuid().ToString(),
                 StaffId = Convert.ToInt32(staffId),
                 Time = time,
                 State = state,
-                Reason = reason
+                Reason = reason,
+                AdminId = admin.Id
             };
 
             // 保存数据
@@ -97,10 +101,14 @@ namespace Hospital.Controllers
             // 保存数据
             var resign = await _affairsRepository.GetResignByIdAsync(resignApproveDto.Id);
             resign.State = resignApproveDto.State;
-            //从员工表中删除
-            var staff= await _userRepository.GetStaffByStaffIdAsync(resign.StaffId);
-            _userRepository.DeleteStaff(staff);
-            await _userRepository.SaveAsync();
+            //从员工表中删除,因为删除员工表后这条辞职信息不存在那么员工无法查看辞职申请结果，故暂不删除
+       /*     if (resignApproveDto.State == ResignState.agreed) { 
+                var staff = await _userRepository.GetStaffByStaffIdAsync(resign.StaffId);
+      
+                _userRepository.DeleteStaff(staff);
+                await _userRepository.SaveAsync(); 
+            }*/
+            await _affairsRepository.SaveAsync();
             return Ok();
         }
     }
