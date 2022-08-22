@@ -80,6 +80,24 @@ namespace Hospital.Database
             });
             modelBuilder.Entity<Schedule>()
                 .HasKey(st => new { st.StaffId, st.Day });
+
+            modelBuilder.Entity<Break>()
+                .HasOne(u => u.Staff)
+                .WithMany(u => u.BreaksOfStaff)
+                .HasForeignKey(s => s.StaffId);
+            modelBuilder.Entity<Break>()
+                .HasOne(u => u.Admin)
+                .WithMany(u => u.BreaksOfAdmin)
+                .HasForeignKey(s => s.AdminId);
+
+            modelBuilder.Entity<Resign>()
+                .HasOne(u => u.Staff)
+                .WithMany(u => u.ResignsOfStaff)
+                .HasForeignKey(s => s.StaffId);
+            modelBuilder.Entity<Resign>()
+                .HasOne(u => u.Admin)
+                .WithMany(u => u.ResignsOfAdmin)
+                .HasForeignKey(s => s.AdminId);
             /*modelBuilder.Entity<Staff_TimeSlot>()
                 .HasKey(st => new { st.StaffId, st.Day });*/
             // 添加科室数据

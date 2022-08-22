@@ -23,12 +23,12 @@ namespace Hospital.Models
         [Required]
         [Column("STAFF_ID")]
         public int StaffId { get; set; }
-        [ForeignKey("StaffId")]
+        // [ForeignKey("StaffId")]
         public Staff Staff { get; set; }
 
         [Column("ADMIN_ID")]
         public int AdminId { get; set; }
-        [ForeignKey("StaffId")]
+        // [ForeignKey("StaffId")]
         public Staff Admin { get; set; }
 
         [Required]
