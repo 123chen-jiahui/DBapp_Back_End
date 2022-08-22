@@ -61,7 +61,19 @@ namespace Hospital.Controllers
             var orders = await _userRepository.GetOrdersByPatientIdAsync(Convert.ToInt32(patientId), parameter.PageNumber, parameter.PageSize);
 
             return Ok(_mapper.Map<IEnumerable<OrderDto>>(orders));
-        } 
+        }
+
+        // 给员工的接口：查看历史订单
+        [HttpGet("forDoctor/{patientId}")]
+        [Authorize]
+        public async Task<IActionResult> GetOrdersForDoctor(
+            [FromRoute] int patientId,
+            [FromQuery] PageResourceParameter parameter
+        )
+        {
+            var orders = await _userRepository.GetOrdersByPatientIdAsync(patientId, parameter.PageNumber, parameter.PageSize);
+            return Ok(_mapper.Map<IEnumerable<OrderDto>>(orders));
+        }
 
         // 查看订单详情
         [HttpGet("{orderId}")]
@@ -80,12 +92,12 @@ namespace Hospital.Controllers
         // 支付的过程
         // 发起支付请求、处理支付请求、通知支付结果
         [HttpPost("{orderId}/placeOrder")]
-        [Authorize(Roles = "Patient")]
+        [Authorize/*(Roles = "Patient")*/]
         public async Task<IActionResult> PlaceOrder([FromRoute] Guid orderId)
         {
             // 1. 获得当前用户信息
-            var patientId = _httpContextAccessor
-                .HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            /*var patientId = _httpContextAccessor
+                .HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;*/
 
             // 2. 开始处理支付
             var order = await _resourceRepository.GetOrderByOrderIdAsync(orderId);
@@ -128,5 +140,7 @@ namespace Hospital.Controllers
 
             return Ok(_mapper.Map<OrderDto>(order));
         }
+
+
     }
 }

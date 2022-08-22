@@ -50,6 +50,11 @@ namespace Hospital.Services
             return await _context.Patients.Where(p => p.Id == patientId).FirstOrDefaultAsync(); // 一定要加FirstOrDefault来执行sql语句
         }
 
+        public async Task<IEnumerable<Patient>> GetPatientsByNameAsync(string keyword)
+        {
+            return await _context.Patients.Where(p => p.Name.Contains(keyword)).ToListAsync();
+        }
+
         public async Task<bool> SaveAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);
@@ -108,6 +113,8 @@ namespace Hospital.Services
         {
             IQueryable<Order> result = _context.Orders;
             result = result.Where(o => o.PatientId == patientId);
+            result = result.OrderByDescending(o => o.CreateDateUTC);
+            // IQueryable<Order> result_reversed = result.Reverse();
 
             return await PaginationList<Order>.CreateAsync(pageNumber, pageSize, result);
             // return await _context.Orders.Where(o => o.PatientId == patientId).ToListAsync();
