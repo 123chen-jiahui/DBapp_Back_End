@@ -66,5 +66,10 @@ namespace Hospital.Services
                 .Where(o => o.Id == orderId)
                 .FirstOrDefaultAsync();
         }
+
+        public async Task<MedicalRecord> GetMedicalRecordByMedicalRecordId(Guid medicalRecordId)
+        {
+            return await _context.MedicalRecords.Where(mr => mr.Id == medicalRecordId).FirstOrDefaultAsync();
+        }
     }
 }

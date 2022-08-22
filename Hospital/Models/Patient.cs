@@ -42,5 +42,6 @@ namespace Hospital.Models
         public ICollection<Registration> Registrations { get; set; } = new List<Registration>(); 
         public ShoppingCart ShoppingCart { get; set; }
         public ICollection<Order> Orders { get; set; }
+        public ICollection<MedicalRecord> MedicalRecords { get; set; }
     }
 }
