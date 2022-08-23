@@ -22,5 +22,6 @@ namespace Hospital.Services
         Task<IEnumerable<Department>> GetDepartments();
 
         Task<bool> SaveAsync();
+        Task<MedicalRecord> GetMedicalRecordByMedicalRecordId(Guid medicalRecordId);
     }
 }

@@ -1,17 +1,14 @@
-﻿using System;
-<<<<<<< HEAD
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-=======
->>>>>>> local_mkc
+﻿using Hospital.Models;
+using System;
 
 namespace Hospital.Dtos
 {
-    public class MedicalRecordForCreationDto
+    public class MedicalRecordDto
     {
+        public Guid Id { get; set; }
         public int PatientId { get; set; }
         public int StaffId { get; set; }
+        public DateTime DiagnosisTime { get; set; }     //诊断时间
         public string DiagnosticResult { get; set; }   //诊断结果
     }
 }

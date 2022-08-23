@@ -27,6 +27,7 @@ namespace Hospital.Database
         public DbSet<Break> Breaks { get; set; }
         public DbSet<Resign> Resigns { get; set; }
         public DbSet<MedicalEquipment> MedicalEquipments { get; set; }
+        public DbSet<MedicalRecord> MedicalRecords { get; set; }
         public DbSet<Medicine> Medicine { get; set; }
         public DbSet<PurchaseList> PurchaseLists { get; set; }
         public DbSet<PurchaseListItem> PurchaseListItems { get; set; }
@@ -82,6 +83,8 @@ namespace Hospital.Database
             modelBuilder.Entity<Schedule>()
                 .HasKey(st => new { st.StaffId, st.Day });
 
+            modelBuilder.Entity<MedicalRecord>()
+                .HasKey(st => new { st.Id, st.PatientId, st.StaffId });
             /*modelBuilder.Entity<Staff_TimeSlot>()
                 .HasKey(st => new { st.StaffId, st.Day });*/
             // 添加科室数据

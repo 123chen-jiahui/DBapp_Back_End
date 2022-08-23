@@ -65,5 +65,6 @@ namespace Hospital.Models
         public ICollection<Break> Breaks_admin { get; set; }
         public ICollection<Resign> Resign_doctor { get; set; }
         public ICollection<Resign> Resign_admin { get; set; }
+        public ICollection<MedicalRecord> MedicalRecords { get; set; }
     }
 }

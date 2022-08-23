@@ -135,6 +135,20 @@ namespace Hospital.Services
         {
             var orders = await _context.Orders.Where(o => o.PatientId == patientId).ToListAsync();
             return orders.Count();
+        public async Task<IEnumerable<MedicalRecord>> GetMedicalRecordByMedicalRecordIdAsync(int patientId)
+        {
+            return await _context.MedicalRecords
+                .Where(mr => mr.PatientId == patientId)
+                .ToListAsync();
+        }
+        public void AddMedicalRecord(MedicalRecord medicalRecord)
+        {
+            if(medicalRecord == null)
+            {
+                throw new ArgumentNullException(nameof(medicalRecord));
+            }
+            _context.MedicalRecords.Add(medicalRecord);
+            _context.SaveChanges();
         }
     }
 }
