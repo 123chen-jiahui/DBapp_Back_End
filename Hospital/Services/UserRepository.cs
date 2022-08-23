@@ -124,5 +124,11 @@ namespace Hospital.Services
             return await PaginationList<Order>.CreateAsync(pageNumber, pageSize, result);
             // return await _context.Orders.Where(o => o.PatientId == patientId).ToListAsync();
         }
+
+        public async Task<int> CountOrdersAsync(int patientId)
+        {
+            var orders = await _context.Orders.Where(o => o.PatientId == patientId).ToListAsync();
+            return orders.Count();
+        }
     }
 }

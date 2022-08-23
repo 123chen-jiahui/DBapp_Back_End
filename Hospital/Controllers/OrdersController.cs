@@ -71,9 +71,27 @@ namespace Hospital.Controllers
             [FromQuery] PageResourceParameter parameter
         )
         {
+            // 检查病人是否存在
+            if (!(await _userRepository.PatientExistsByPatientIdAsync(patientId)))
+            {
+                return BadRequest("病人不存在，请检查输入");
+            }
             var orders = await _userRepository.GetOrdersByPatientIdAsync(patientId, parameter.PageNumber, parameter.PageSize);
             return Ok(_mapper.Map<IEnumerable<OrderDto>>(orders));
         }
+
+        // 返回订单的数量，用于分页
+        [HttpGet("forDoctor/{patientId}/count")]
+        public async Task<IActionResult> CountOrders([FromRoute] int patientId)
+        {
+            if (!(await _userRepository.PatientExistsByPatientIdAsync(patientId)))
+            {
+                return BadRequest("病人不存在，请检查输入");
+            }
+            var count = await _userRepository.CountOrdersAsync(patientId);
+            return Ok(count);
+        }
+
 
         // 查看订单详情
         [HttpGet("{orderId}")]

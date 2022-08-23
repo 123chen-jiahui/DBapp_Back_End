@@ -26,5 +26,6 @@ namespace Hospital.Services
         Task AddOrderAsync(Order order);
         Task<bool> SaveAsync();
         Task<PaginationList<Order>> GetOrdersByPatientIdAsync(int patientId, int pageNumber, int pageSize);
+        Task<int> CountOrdersAsync(int patientId);
     }
 }
