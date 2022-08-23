@@ -60,10 +60,10 @@ namespace Hospital.Models
 
         public ICollection<Registration> Registrations { get; set; }/* = new List<Registration>();*/ 
         public ICollection<PurchaseList> PurchaseLists { get; set; }
-        public ICollection<Break> BreaksOfStaff { get; set; }
-        public ICollection<Break> BreaksOfAdmin { get; set; }
-        public ICollection<Resign> ResignsOfStaff { get; set; }
-        public ICollection<Resign> ResignsOfAdmin { get; set; }
-        public Resign Resign { get; set; }
+
+        public ICollection<Break> Breaks_doctor { get; set; }
+        public ICollection<Break> Breaks_admin { get; set; }
+        public ICollection<Resign> Resign_doctor { get; set; }
+        public ICollection<Resign> Resign_admin { get; set; }
     }
 }

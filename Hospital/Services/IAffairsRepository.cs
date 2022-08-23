@@ -34,13 +34,13 @@ namespace Hospital.Services
         Task AddBreakAsync(Break breakk);
         Task<IEnumerable<Break>> GetBreaksByStaffIdAsync(int staffId);
         Task<IEnumerable<Break>> GetUnapprovedBreaksAsync();
-        Task<Break> GetBreakByIdAsync(Guid Id);
+        Task<Break> GetBreakByIdAsync(string Id);
 
         //辞职
         Task AddResignAsync(Resign resign);
         Task<IEnumerable<Resign>> GetResignsByStaffIdAsync(int staffId);
         Task<IEnumerable<Resign>> GetUnapprovedResignsAsync();
-        Task<Resign> GetResignByIdAsync(Guid Id);
+        Task<Resign> GetResignByIdAsync(string Id);
         Task<bool> SaveAsync();
     }
 }

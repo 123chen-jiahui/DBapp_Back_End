@@ -21,17 +21,20 @@ namespace Hospital.Controllers
     public class BreakController: ControllerBase
     {
         private readonly IAffairsRepository _affairsRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IHttpContextAccessor _httpContextAccessor;
         public BreakController(
             IAffairsRepository affairsRepository,
+            IUserRepository userRepository,
             IMapper mapper,
             IHttpClientFactory httpClientFactory,
             IHttpContextAccessor httpContextAccessor
         )
         {
             _affairsRepository = affairsRepository;
+            _userRepository = userRepository;
             _mapper = mapper;
             _httpClientFactory = httpClientFactory;
             _httpContextAccessor = httpContextAccessor;
@@ -45,19 +48,23 @@ namespace Hospital.Controllers
             var staffId = _httpContextAccessor
                 .HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
+          
             BreakState state = BreakState.waitForApproval;
             DateTime fromTime = breakForCreationDto.FromTime;
             DateTime toTime = breakForCreationDto.ToTime;
             string reason = breakForCreationDto.Reason;
+            var admin=await _userRepository.GetAdminByAsync();
 
             var breakk = new Break()            //break有歧义所以用breakk
             {
-                Id = Guid.NewGuid(),
+                Id = Guid.NewGuid().ToString(),
                 StaffId= Convert.ToInt32(staffId),
-                FromTime=fromTime,
-                ToTime=toTime,
-                State=state,
-                Reason=reason
+   
+                FromTime = fromTime,
+                ToTime = toTime,
+                State = state,
+                Reason = reason,
+                AdminId=admin.Id
             };
 
             // 保存数据
@@ -98,6 +105,7 @@ namespace Hospital.Controllers
             // 保存数据
             var breakk=await _affairsRepository.GetBreakByIdAsync(breakApproveDto.Id);
             breakk.State = breakApproveDto.State;
+            await _affairsRepository.SaveAsync();
             return Ok();
         }
     }

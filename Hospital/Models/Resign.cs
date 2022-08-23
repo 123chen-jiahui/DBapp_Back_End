@@ -14,7 +14,7 @@ namespace Hospital.Models
         [Key]
         [Required]
         [Column("ID")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [Required]
         [Column("TIME")]

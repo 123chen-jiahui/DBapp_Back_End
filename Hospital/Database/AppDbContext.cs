@@ -41,6 +41,7 @@ namespace Hospital.Database
         public DbSet<Schedule> Schedules { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.HasSequence("SEQ_PATIENT_ID")
                 .StartsAt(1000000)
                 .IncrementsBy(1);
@@ -122,6 +123,33 @@ namespace Hospital.Database
             IList<Room> room = JsonConvert.DeserializeObject<IList<Room>>(roomJsonData);
             modelBuilder.Entity<Room>().HasData(room);
             // modelBuilder.HasSequence("SEQ_PATIENT_ID", "C##TEST").IncrementsBy(1);
+
+
+
+
+            modelBuilder.Entity<Break>()
+             .HasOne(u => u.Staff)
+             .WithMany(u => u.Breaks_doctor)
+             .HasForeignKey(s => s.StaffId)
+             .OnDelete(DeleteBehavior.Restrict);
+       
+            modelBuilder.Entity<Break>()
+              .HasOne(u => u.Admin)
+              .WithMany(u => u.Breaks_admin)
+              .HasForeignKey(s => s.AdminId)
+              .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Resign>()
+             .HasOne(u => u.Admin)
+             .WithMany(u => u.Resign_admin)
+             .HasForeignKey(s => s.AdminId)
+             .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Resign>()
+              .HasOne(u => u.Staff)
+              .WithMany(u => u.Resign_doctor)
+              .HasForeignKey(s => s.StaffId)
+              .OnDelete(DeleteBehavior.Restrict);
             base.OnModelCreating(modelBuilder);
         }
     }
