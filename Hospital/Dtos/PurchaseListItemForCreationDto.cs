@@ -12,6 +12,5 @@ namespace Hospital.Dtos
         public uint ItemCount { get; set; }
         public string Producer { get; set; }
         public string description { get; set; }
-        public Guid PurchaseListId { get; set; }
     }
 }

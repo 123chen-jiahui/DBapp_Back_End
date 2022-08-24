@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Hospital.Services
 {
@@ -16,29 +17,32 @@ namespace Hospital.Services
             _context = appDbContext;
         }
 
-        public PurchaseList GetPurchaseListById(Guid id)
+        public async Task<PurchaseList> GetPurchaseListByIdAsync(Guid id)
         {
-            return _context.PurchaseLists.Include(t => t.PurchaseListItems).FirstOrDefault(pl => pl.Id == id);
+            return await _context.PurchaseLists.Include(t => t.PurchaseListItems).FirstOrDefaultAsync(pl => pl.Id == id);
         }
 
 
-        public IEnumerable<PurchaseList> GetPurchaseLists(int staffid)
+        public async Task<IEnumerable<PurchaseList>> GetPurchaseListsAsync(int staffid)
         {
             IQueryable<PurchaseList> res = _context.PurchaseLists.Include(t => t.PurchaseListItems);
             if(staffid>= 2000000L)
             {
                 res=res.Where(t => t.StaffId==staffid);
             }
-            return res.ToList();
-        }
-        public IEnumerable<PurchaseListItem> GetPurchaseListItemsById(Guid id)
-        {
-            return _context.PurchaseListItems.Where(pli => pli.PurchaseListId == id).ToList();
+           
+            return await res.ToListAsync();
         }
 
-        public bool PurchaseListExists(Guid id)
+       
+        public async Task<IEnumerable<PurchaseListItem>> GetPurchaseListItemsByIdAsync(Guid id)
         {
-            return _context.PurchaseLists.Any(pl => pl.Id == id);
+            return await _context.PurchaseListItems.Where(pli => pli.PurchaseListId == id).ToListAsync();
+        }
+
+        public async Task<bool> PurchaseListExistsAsync(Guid id)
+        {
+            return await _context.PurchaseLists.AnyAsync(pl => pl.Id == id);
         }
 
         public void AddPurchaseList(PurchaseList purchaseList)
@@ -51,9 +55,9 @@ namespace Hospital.Services
             //_context.SaveChanges();
         }
 
-        public bool Save()
+        public async Task<bool> SaveAsync()
         {
-            return (_context.SaveChanges() >= 0);
+            return (await _context.SaveChangesAsync() >= 0);
         }
 
         public void AddPurchaseListItem(Guid purchaseListId, PurchaseListItem purchaseListItem)
@@ -80,7 +84,7 @@ namespace Hospital.Services
                 }
                 else
                 {
-                    medicineitem.Inventory += (int)purchaseListItem.ItemCount;
+                    medicineitem.Inventory += purchaseListItem.ItemCount;
                 }
             }
             else if(purchaseListItem.PurchaseListItemType == PurchaseListItemType.MedicialEquipment.ToString("G"))
@@ -105,5 +109,7 @@ namespace Hospital.Services
             purchaseListItem.PurchaseListId=purchaseListId;
             _context.PurchaseListItems.Add(purchaseListItem);
         }
+
+       
     }
 }

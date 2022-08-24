@@ -80,7 +80,7 @@ namespace Hospital.Database
                 .HasKey(st => new { st.StaffId, st.Day });
 
             // 采购项目PurchaseListItem主码有两个属性，需要在此处设置
-            modelBuilder.Entity<PurchaseListItem>().HasKey(pi => new { pi.ItemId, pi.PurchaseListItemType });
+            modelBuilder.Entity<PurchaseListItem>().HasKey(pi => new { pi.ItemId, pi.PurchaseListId });
 
             /*modelBuilder.Entity<Staff_TimeSlot>()
                 .HasKey(st => new { st.StaffId, st.Day });*/

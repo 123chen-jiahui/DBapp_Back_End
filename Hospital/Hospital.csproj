@@ -26,4 +26,6 @@
     <PackageReference Include="stateless" Version="5.1.1" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

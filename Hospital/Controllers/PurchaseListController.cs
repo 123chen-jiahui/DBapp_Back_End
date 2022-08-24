@@ -8,10 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Hospital.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("purchaselist")]
     //[Authorize(Roles="Admin")]
     [ApiController]
     public class PurchaseListController : ControllerBase
@@ -31,9 +32,10 @@ namespace Hospital.Controllers
         // 查询某个职工负责的采购清单 //api/purchaselist?staffid={}
         [HttpGet]
         [HttpHead]
-        public IActionResult GetPurchaseLists([FromQuery] int staffid)
+        public async Task<IActionResult> GetPurchaseLists([FromQuery] int staffid)
         {
-            var purchaseListsFromRepo = _purchaseListRepository.GetPurchaseLists(staffid);
+            
+            var purchaseListsFromRepo = await _purchaseListRepository.GetPurchaseListsAsync(staffid);
             if(purchaseListsFromRepo == null || purchaseListsFromRepo.Count()<=0)
             {
                 return NotFound("未找到采购清单");
@@ -45,9 +47,9 @@ namespace Hospital.Controllers
         // api/purchaselist/{purchaseListId}
         [HttpGet("{purchaseListId:Guid}",Name = "GetPurchaseListById")]
         [HttpHead]
-        public IActionResult GetPurchaseListById(Guid purchaseListId)
+        public async Task<IActionResult> GetPurchaseListByIdAsync(Guid purchaseListId)
         {
-            var purchaselistFromRepo = _purchaseListRepository.GetPurchaseListById(purchaseListId);
+            var purchaselistFromRepo = await _purchaseListRepository.GetPurchaseListByIdAsync(purchaseListId);
             if (purchaselistFromRepo == null)
             {
                 return NotFound($"采购清单{purchaselistFromRepo}找不到");
@@ -58,49 +60,33 @@ namespace Hospital.Controllers
         // 获取某一采购清单的采购详细信息，具体购买的物品信息
         // api/purchaselist/{purchaseListId}/items
         [HttpGet("{purchaseListId:Guid}/items",Name = "GetPurchaseListItems")]
-        public IActionResult GetPurchaseListItems(Guid purchaseListId)
+        public async Task<IActionResult> GetPurchaseListItemsAsync(Guid purchaseListId)
         {
-            if (!_purchaseListRepository.PurchaseListExists(purchaseListId))
+            if (!(await _purchaseListRepository.PurchaseListExistsAsync(purchaseListId)))
                 return NotFound("不存在相应采购清单");
-            var itemsFromRepo = _purchaseListRepository.GetPurchaseListItemsById(purchaseListId);
+            var itemsFromRepo =await _purchaseListRepository.GetPurchaseListItemsByIdAsync(purchaseListId);
             if (itemsFromRepo == null || itemsFromRepo.Count() <= 0)
                 return NotFound($"不存在{purchaseListId}的采购项");
             return Ok(_mapper.Map<IEnumerable<PurchaseListItemDto>>(itemsFromRepo));   
         }
 
         [HttpPost]
-        public IActionResult CreatePurchaseList([FromBody] PurchaseListForCreationDto purchaseListForCreationDto)
+        public async Task<IActionResult> CreatePurchaseList([FromBody] PurchaseListForCreationDto purchaseListForCreationDto)
         {
             var PurchaseListModel = _mapper.Map<PurchaseList>(purchaseListForCreationDto);
+            foreach(PurchaseListItem item in PurchaseListModel.PurchaseListItems)
+            {
+                item.PurchaseListId = PurchaseListModel.Id;
+                _purchaseListRepository.AddPurchaseListItem(PurchaseListModel.Id, item);
+            }
             _purchaseListRepository.AddPurchaseList(PurchaseListModel);
-            _purchaseListRepository.Save();
+            await _purchaseListRepository.SaveAsync();
             var purchaseListToReturn = _mapper.Map<PurchaseListDto>(PurchaseListModel);
 
             return CreatedAtRoute(
                 "GetPurchaseListById",
                 new { purchaseListId = purchaseListToReturn.Id },
                 purchaseListToReturn
-                );
-        }
-
-        [HttpPost]
-        public IActionResult CreatePurchaseListItem(
-            [FromRoute] Guid purchaseListId,
-            [FromBody] PurchaseListItemForCreationDto purchaseListItemForCreationDto
-            )
-        {
-            if (!_purchaseListRepository.PurchaseListExists(purchaseListId))
-                return NotFound("不存在相应采购清单");
-
-            var purchaseListItemModel=_mapper.Map<PurchaseListItem>(purchaseListItemForCreationDto);
-            _purchaseListRepository.AddPurchaseListItem(purchaseListId, purchaseListItemModel);
-            _purchaseListRepository.Save();
-
-            var ItemToReturn = _mapper.Map<PurchaseListItemDto>(purchaseListItemModel);
-            return CreatedAtRoute(
-                "GetPurchaseListItems",
-                new { purchaseListId = purchaseListItemModel.PurchaseListId },
-                ItemToReturn
                 );
         }
     }

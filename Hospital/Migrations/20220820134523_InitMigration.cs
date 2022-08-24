@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Hospital.Migrations
 {
-    public partial class DataSeeding : Migration
+    public partial class InitMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -161,7 +161,7 @@ namespace Hospital.Migrations
                 name: "MEDICAL_EQUIPMENTS",
                 columns: table => new
                 {
-                    ID = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    ID = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: false),
                     NAME = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     PRODUCER = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
                     START_USE_TIME = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
@@ -370,16 +370,17 @@ namespace Hospital.Migrations
                 columns: table => new
                 {
                     ITEM_ID = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: false),
-                    PURCHASE_LIST_ITEM_TYPE = table.Column<int>(type: "NUMBER(10)", nullable: false),
-                    NAME = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: true),
+                    PURCHASE_LIST_ID = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    PURCHASE_LIST_ITEM_TYPE = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    NAME = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
                     PRICE = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ITEM_COUNT = table.Column<long>(type: "NUMBER(10)", nullable: false),
-                    PRODUCER = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: true),
-                    PURCHASE_LIST_ID = table.Column<Guid>(type: "RAW(16)", nullable: false)
+                    ITEM_COUNT = table.Column<int>(type: "NUMBER(10)", nullable: false),
+                    PRODUCER = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
+                    DESCRIPTION = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PURCHASE_LIST_ITEMS", x => new { x.ITEM_ID, x.PURCHASE_LIST_ITEM_TYPE });
+                    table.PrimaryKey("PK_PURCHASE_LIST_ITEMS", x => new { x.ITEM_ID, x.PURCHASE_LIST_ID });
                     table.ForeignKey(
                         name: "FK_PURCHASE_LIST_ITEMS_PURCHASE_LISTS_PURCHASE_LIST_ID",
                         column: x => x.PURCHASE_LIST_ID,
@@ -463,18 +464,18 @@ namespace Hospital.Migrations
 
             migrationBuilder.InsertData(
                 table: "PURCHASE_LIST_ITEMS",
-                columns: new[] { "ITEM_ID", "PURCHASE_LIST_ITEM_TYPE", "ITEM_COUNT", "NAME", "PRICE", "PRODUCER", "PURCHASE_LIST_ID" },
-                values: new object[] { "H19994016", 0, 30L, "阿莫西林克拉维酸钾片", 9.6m, "长江制药有限公司", new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921") });
+                columns: new[] { "ITEM_ID", "PURCHASE_LIST_ID", "ITEM_COUNT", "NAME", "PRICE", "PRODUCER", "PURCHASE_LIST_ITEM_TYPE", "DESCRIPTION" },
+                values: new object[] { "H19994016", new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921"), 30, "阿莫西林克拉维酸钾片", 9.6m, "长江制药有限公司", "Medicine", null });
 
             migrationBuilder.InsertData(
                 table: "PURCHASE_LIST_ITEMS",
-                columns: new[] { "ITEM_ID", "PURCHASE_LIST_ITEM_TYPE", "ITEM_COUNT", "NAME", "PRICE", "PRODUCER", "PURCHASE_LIST_ID" },
-                values: new object[] { "H20040016", 0, 50L, "地红霉素肠溶胶囊", 12.5m, "长春制药", new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921") });
+                columns: new[] { "ITEM_ID", "PURCHASE_LIST_ID", "ITEM_COUNT", "NAME", "PRICE", "PRODUCER", "PURCHASE_LIST_ITEM_TYPE", "DESCRIPTION" },
+                values: new object[] { "H20040016", new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921"), 50, "地红霉素肠溶胶囊", 12.5m, "长春制药", "Medicine", null });
 
             migrationBuilder.InsertData(
                 table: "PURCHASE_LIST_ITEMS",
-                columns: new[] { "ITEM_ID", "PURCHASE_LIST_ITEM_TYPE", "ITEM_COUNT", "NAME", "PRICE", "PRODUCER", "PURCHASE_LIST_ID" },
-                values: new object[] { "326AG", 1, 1L, "核磁共振成像仪", 3000000m, "GE", new Guid("8da78208-5868-fe42-518e-b31dea4c88a5") });
+                columns: new[] { "ITEM_ID", "PURCHASE_LIST_ID", "ITEM_COUNT", "NAME", "PRICE", "PRODUCER", "PURCHASE_LIST_ITEM_TYPE", "DESCRIPTION" },
+                values: new object[] { "326AG", new Guid("8da78208-5868-fe42-518e-b31dea4c88a5"), 1, "核磁共振成像仪", 3000000m, "GE", "MedicialEquipment", null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_LINEITEM_MEDICINE_ID",

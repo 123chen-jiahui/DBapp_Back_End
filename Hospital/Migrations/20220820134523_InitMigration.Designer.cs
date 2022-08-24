@@ -10,8 +10,8 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace Hospital.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220819091856_DataSeeding")]
-    partial class DataSeeding
+    [Migration("20220820134523_InitMigration")]
+    partial class InitMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -172,9 +172,9 @@ namespace Hospital.Migrations
 
             modelBuilder.Entity("Hospital.Models.MedicalEquipment", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("RAW(16)")
+                    b.Property<string>("Id")
+                        .HasMaxLength(20)
+                        .HasColumnType("NVARCHAR2(20)")
                         .HasColumnName("ID");
 
                     b.Property<string>("Name")
@@ -403,15 +403,16 @@ namespace Hospital.Migrations
                         .HasColumnType("NVARCHAR2(20)")
                         .HasColumnName("ITEM_ID");
 
-                    b.Property<int>("PurchaseListItemType")
-                        .HasColumnType("NUMBER(10)")
-                        .HasColumnName("PURCHASE_LIST_ITEM_TYPE");
+                    b.Property<Guid>("PurchaseListId")
+                        .HasColumnType("RAW(16)")
+                        .HasColumnName("PURCHASE_LIST_ID");
 
-                    b.Property<long>("ItemCount")
+                    b.Property<int>("ItemCount")
                         .HasColumnType("NUMBER(10)")
                         .HasColumnName("ITEM_COUNT");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("NVARCHAR2(100)")
                         .HasColumnName("NAME");
@@ -421,15 +422,21 @@ namespace Hospital.Migrations
                         .HasColumnName("PRICE");
 
                     b.Property<string>("Producer")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("NVARCHAR2(50)")
                         .HasColumnName("PRODUCER");
 
-                    b.Property<Guid>("PurchaseListId")
-                        .HasColumnType("RAW(16)")
-                        .HasColumnName("PURCHASE_LIST_ID");
+                    b.Property<string>("PurchaseListItemType")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("PURCHASE_LIST_ITEM_TYPE");
 
-                    b.HasKey("ItemId", "PurchaseListItemType");
+                    b.Property<string>("description")
+                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnName("DESCRIPTION");
+
+                    b.HasKey("ItemId", "PurchaseListId");
 
                     b.HasIndex("PurchaseListId");
 
@@ -439,32 +446,32 @@ namespace Hospital.Migrations
                         new
                         {
                             ItemId = "H19994016",
-                            PurchaseListItemType = 0,
-                            ItemCount = 30L,
+                            PurchaseListId = new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921"),
+                            ItemCount = 30,
                             Name = "阿莫西林克拉维酸钾片",
                             Price = 9.6m,
                             Producer = "长江制药有限公司",
-                            PurchaseListId = new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921")
+                            PurchaseListItemType = "Medicine"
                         },
                         new
                         {
                             ItemId = "H20040016",
-                            PurchaseListItemType = 0,
-                            ItemCount = 50L,
+                            PurchaseListId = new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921"),
+                            ItemCount = 50,
                             Name = "地红霉素肠溶胶囊",
                             Price = 12.5m,
                             Producer = "长春制药",
-                            PurchaseListId = new Guid("bdb5a3ab-2173-2650-90b3-00ce06475921")
+                            PurchaseListItemType = "Medicine"
                         },
                         new
                         {
                             ItemId = "326AG",
-                            PurchaseListItemType = 1,
-                            ItemCount = 1L,
+                            PurchaseListId = new Guid("8da78208-5868-fe42-518e-b31dea4c88a5"),
+                            ItemCount = 1,
                             Name = "核磁共振成像仪",
                             Price = 3000000m,
                             Producer = "GE",
-                            PurchaseListId = new Guid("8da78208-5868-fe42-518e-b31dea4c88a5")
+                            PurchaseListItemType = "MedicialEquipment"
                         });
                 });
 
@@ -1064,7 +1071,7 @@ namespace Hospital.Migrations
             modelBuilder.Entity("Hospital.Models.PurchaseListItem", b =>
                 {
                     b.HasOne("Hospital.Models.PurchaseList", "PurchaseList")
-                        .WithMany()
+                        .WithMany("PurchaseListItems")
                         .HasForeignKey("PurchaseListId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1199,6 +1206,11 @@ namespace Hospital.Migrations
                     b.Navigation("Registrations");
 
                     b.Navigation("ShoppingCart");
+                });
+
+            modelBuilder.Entity("Hospital.Models.PurchaseList", b =>
+                {
+                    b.Navigation("PurchaseListItems");
                 });
 
             modelBuilder.Entity("Hospital.Models.Room", b =>
