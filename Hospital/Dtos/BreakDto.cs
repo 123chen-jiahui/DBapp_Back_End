@@ -7,6 +7,7 @@ namespace Hospital.Dtos
 {
     public class BreakDto
     {
+        public Guid Id { get; set; }
         public int staffId { get; set; }   //可能需要前端转化成name
         public DateTime FromTime { get; set; }
         public DateTime ToTime { get; set; }

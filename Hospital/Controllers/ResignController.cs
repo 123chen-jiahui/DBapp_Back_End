@@ -67,7 +67,7 @@ namespace Hospital.Controllers
             // 保存数据
             await _affairsRepository.AddResignAsync(resign);
             await _affairsRepository.SaveAsync();
-            return Ok();
+            return Ok(_mapper.Map<ResignDto>(resign));
         }
 
         /* 获取我的历史辞职列表，借鉴了获取staffs列表 */

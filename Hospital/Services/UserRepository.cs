@@ -135,6 +135,7 @@ namespace Hospital.Services
         {
             var orders = await _context.Orders.Where(o => o.PatientId == patientId).ToListAsync();
             return orders.Count();
+        }
         public async Task<IEnumerable<MedicalRecord>> GetMedicalRecordByMedicalRecordIdAsync(int patientId)
         {
             return await _context.MedicalRecords

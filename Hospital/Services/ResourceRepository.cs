@@ -76,6 +76,7 @@ namespace Hospital.Services
         public async Task<bool> SaveAsync()
         {
             return (await _context.SaveChangesAsync() >= 0);
+        }
         public async Task<MedicalRecord> GetMedicalRecordByMedicalRecordId(Guid medicalRecordId)
         {
             return await _context.MedicalRecords.Where(mr => mr.Id == medicalRecordId).FirstOrDefaultAsync();

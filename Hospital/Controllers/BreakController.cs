@@ -70,7 +70,7 @@ namespace Hospital.Controllers
             // 保存数据
             await _affairsRepository.AddBreakAsync(breakk);
             await _affairsRepository.SaveAsync();
-            return Ok();
+            return Ok(_mapper.Map<BreakDto>(breakk));
         }
 
 
