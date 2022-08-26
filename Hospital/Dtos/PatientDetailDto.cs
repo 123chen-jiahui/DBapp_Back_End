@@ -12,6 +12,6 @@ namespace Hospital.Dtos
         public string Name { get; set; }
         public int Age { get; set; }
         public string Gender { get; set; }
-        public ICollection<MedicalRecord> MedicalRecords { get; set; }
+        public ICollection<MedicalRecordDto> MedicalRecords { get; set; }
     }
 }

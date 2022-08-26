@@ -56,7 +56,7 @@ namespace Hospital.Services
         }
         public async Task<Patient> GetPatientDetailByPatientIdAsync(int patientId)
         {
-            return await _context.Patients.Where(p => p.Id == patientId).Include(p => p.MedicalRecords).FirstOrDefaultAsync();
+            return await _context.Patients.Include(p => p.MedicalRecords).Where(p => p.Id == patientId).FirstOrDefaultAsync();
         }
         public async Task<IEnumerable<Patient>> GetPatientsByNameAsync(string keyword)
         {
