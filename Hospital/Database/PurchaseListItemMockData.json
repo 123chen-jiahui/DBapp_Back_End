@@ -1,0 +1,29 @@
+[
+  {
+    "ItemId": "H19994016",
+    "PurchaseListItemType": "Medicine",
+    "Name": "阿莫西林克拉维酸钾片",
+    "Price": 9.6,
+    "ItemCount": 30,
+    "Producer": "长江制药有限公司",
+    "PurchaseListId": "bdb5a3ab-2173-2650-90b3-00ce06475921"
+  },
+  {
+    "ItemId": "H20040016",
+    "PurchaseListItemType": "Medicine",
+    "Name": "地红霉素肠溶胶囊",
+    "Price": 12.5,
+    "ItemCount": 50,
+    "Producer": "长春制药",
+    "PurchaseListId": "bdb5a3ab-2173-2650-90b3-00ce06475921"
+  },
+  {
+    "ItemId": "326AG",
+    "PurchaseListItemType": "MedicialEquipment",
+    "Name": "核磁共振成像仪",
+    "Price": 3000000,
+    "ItemCount": 1,
+    "Producer": "GE",
+    "PurchaseListId": "8da78208-5868-fe42-518e-b31dea4c88a5"
+  }
+]

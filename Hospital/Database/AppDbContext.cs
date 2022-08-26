@@ -85,6 +85,9 @@ namespace Hospital.Database
 
             modelBuilder.Entity<MedicalRecord>()
                 .HasKey(st => new { st.Id, st.PatientId, st.StaffId });
+            // 采购项目PurchaseListItem主码有两个属性，需要在此处设置
+            modelBuilder.Entity<PurchaseListItem>().HasKey(pi => new { pi.ItemId, pi.PurchaseListId });
+
             /*modelBuilder.Entity<Staff_TimeSlot>()
                 .HasKey(st => new { st.StaffId, st.Day });*/
             // 添加科室数据
@@ -110,9 +113,6 @@ namespace Hospital.Database
             modelBuilder.Entity<Room>().HasData(room);
             // modelBuilder.HasSequence("SEQ_PATIENT_ID", "C##TEST").IncrementsBy(1);
 
-
-
-
             modelBuilder.Entity<Break>()
              .HasOne(u => u.Staff)
              .WithMany(u => u.Breaks_doctor)
@@ -136,6 +136,16 @@ namespace Hospital.Database
               .WithMany(u => u.Resign_doctor)
               .HasForeignKey(s => s.StaffId)
               .OnDelete(DeleteBehavior.Restrict);
+            // 添加采购清单数据和采购项目数据
+            var purchaseListData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/PurchaseListMockData.json");
+            IList<PurchaseList> purchaseLists = JsonConvert.DeserializeObject<IList<PurchaseList>>(purchaseListData);
+            modelBuilder.Entity<PurchaseList>().HasData(purchaseLists);
+
+            var purchaseListItemData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/PurchaseListItemMockData.json");
+            IList<PurchaseListItem> purchaseListItems = JsonConvert.DeserializeObject<IList<PurchaseListItem>>(purchaseListItemData);
+            modelBuilder.Entity<PurchaseListItem>().HasData(purchaseListItems);
+
+
             base.OnModelCreating(modelBuilder);
         }
     }
