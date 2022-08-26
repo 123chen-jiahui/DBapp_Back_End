@@ -54,7 +54,10 @@ namespace Hospital.Services
         {
             return await _context.Patients.Where(p => p.Id == patientId).FirstOrDefaultAsync(); // 一定要加FirstOrDefault来执行sql语句
         }
-
+        public async Task<Patient> GetPatientDetailByPatientIdAsync(int patientId)
+        {
+            return await _context.Patients.Where(p => p.Id == patientId).Include(p => p.MedicalRecords).FirstOrDefaultAsync();
+        }
         public async Task<IEnumerable<Patient>> GetPatientsByNameAsync(string keyword)
         {
             return await _context.Patients.Where(p => p.Name.Contains(keyword)).ToListAsync();

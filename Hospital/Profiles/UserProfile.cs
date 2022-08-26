@@ -76,6 +76,15 @@ namespace Hospital.Profiles
                     dest => dest.Gender,
                     opt => opt.MapFrom(src => GetGender(src.Gender))
             );
+            CreateMap<Patient, PatientDetailDto>()
+                .ForMember(
+                    dest => dest.Age,
+                    opt => opt.MapFrom(src => GetAge(src.Birthday))
+                )
+                .ForMember(
+                    dest => dest.Gender,
+                    opt => opt.MapFrom(src => GetGender(src.Gender))
+                );
         }
     }
 }

@@ -59,5 +59,13 @@ namespace Hospital.Controllers
             var patients = await _userRepository.GetPatientsByNameAsync(keyWord);
             return Ok(_mapper.Map<IEnumerable<PatientDto>>(patients));
         }
+
+        [HttpGet("detail/{patientId}")]
+        [Authorize]
+        public async Task<IActionResult> GetPatientDetail([FromRoute] int patientId)
+        {
+            var patientDetail = await _userRepository.GetPatientDetailByPatientIdAsync(patientId);
+            return Ok(_mapper.Map<PatientDetailDto>(patientDetail));
+        }
     }
 }
