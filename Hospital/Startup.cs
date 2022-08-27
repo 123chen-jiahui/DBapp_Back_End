@@ -24,6 +24,8 @@ namespace Hospital
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         // 注入IConfiguration的服务依赖
         public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
@@ -66,6 +68,15 @@ namespace Hospital
             services.AddTransient<IAffairsRepository, AffairsRepository>();
             services.AddTransient<IPurchaseListRepository, PurchaseListRepository>();
 
+            services.AddCors(options => {
+                options.AddPolicy(MyAllowSpecificOrigins, builder => {
+                    builder.SetIsOriginAllowed((x) => true)
+                   .AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+                });
+
+            });
 
             services.AddDbContext<AppDbContext>(option => {
                 option.UseOracle(Configuration["DbContext:ConnectionString"]);
@@ -89,6 +100,8 @@ namespace Hospital
             }
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthentication(); // 你是谁
 
