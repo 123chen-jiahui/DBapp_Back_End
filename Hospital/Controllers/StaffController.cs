@@ -55,6 +55,14 @@ namespace Hospital.Controllers
             return Ok(staffDto);
         }
 
+        // 返回订单的数量，用于分页
+        [HttpGet("{departmentId}/count")]
+        public async Task<IActionResult> CountStaff([FromRoute] int departmentId)
+        {
+            var count = await _userRepository.CountStaffAsync(departmentId);
+            return Ok(count);
+        }
+
         /* 获取员工基本信息 */
         [HttpGet("info")]
         [Authorize]
@@ -65,6 +73,21 @@ namespace Hospital.Controllers
             var staff = await _userRepository.GetStaffByStaffIdAsync(Convert.ToInt32(staffId));
 
             return Ok(_mapper.Map<StaffDto>(staff));
+        }
+
+        // 删除员工
+        [HttpDelete("{staffId}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteStaff([FromRoute] int staffId)
+        {
+            var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
+            if (staff == null)
+            {
+                return NotFound("找不到要删除的医生");
+            }
+
+            _userRepository.DeleteStaff(staff);
+            return NoContent();
         }
     }
 }

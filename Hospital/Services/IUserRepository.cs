@@ -31,5 +31,6 @@ namespace Hospital.Services
         void AddMedicalRecord(MedicalRecord medicalRecord);
         Task<PaginationList<Order>> GetOrdersByPatientIdAsync(int patientId, int pageNumber, int pageSize);
         Task<int> CountOrdersAsync(int patientId);
+        Task<int> CountStaffAsync(int departmentId);
     }
 }
