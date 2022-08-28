@@ -42,7 +42,7 @@ namespace Hospital.Services
 
         public async Task<IEnumerable<Schedule>> GetScheduleAsync(int staffId)
         {
-            return await _context.Schedules.Where(s_ts => s_ts.StaffId == staffId).ToListAsync();
+            return await _context.Schedules.Include(s => s.TimeSlot).Where(s_ts => s_ts.StaffId == staffId).ToListAsync();
         }
 
         public async Task<Schedule> GetScheduleOfOneDay(int staffId, int day)

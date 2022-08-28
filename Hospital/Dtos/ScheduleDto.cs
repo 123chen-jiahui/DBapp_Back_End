@@ -11,5 +11,6 @@ namespace Hospital.Dtos
         public int Day { get; set; }
         public int TimeSlotId { get; set; }
         public string RoomId { get; set; }
+        public TimeSlotDto TimeSlot { get; set; }
     }
 }
