@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Hospital.Dtos;
+using Hospital.Helper;
 using Hospital.Models;
 using Hospital.ResourceParameter;
 using Hospital.Services;
@@ -42,7 +43,7 @@ namespace Hospital.Controllers
         [HttpGet("{DepartmentId}")]
         public async Task<IActionResult> GetStafffs(
             [FromRoute] int departmentId,
-            [FromQuery] PageResourceParameter pageParameters 
+            [FromQuery] PageResourceParameter pageParameters
         ) // 路由都是string
         {
             // int Id = Convert.ToInt32(departmentId);
@@ -88,6 +89,22 @@ namespace Hospital.Controllers
 
             _userRepository.DeleteStaff(staff);
             return NoContent();
+        }
+
+        [HttpPost("test")]
+        public IActionResult Test()
+        {
+            string photo = Request.Form["photo"];
+            Console.WriteLine("photo is {0}", photo);
+            Console.WriteLine("aaaaahello");
+                Console.WriteLine("hello");
+                string newPhoto = PhotoUpload.UploadPhoto(photo, "customerPhoto/" + "5");
+                if (newPhoto != null)
+                {
+                    return NoContent();
+                    // Console.WriteLine("successfully make newPhoto");
+                }
+            return BadRequest();
         }
     }
 }
