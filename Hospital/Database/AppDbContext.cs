@@ -116,26 +116,22 @@ namespace Hospital.Database
             modelBuilder.Entity<Break>()
              .HasOne(u => u.Staff)
              .WithMany(u => u.Breaks_doctor)
-             .HasForeignKey(s => s.StaffId)
-             .OnDelete(DeleteBehavior.Restrict);
+             .HasForeignKey(s => s.StaffId);
        
             modelBuilder.Entity<Break>()
               .HasOne(u => u.Admin)
               .WithMany(u => u.Breaks_admin)
-              .HasForeignKey(s => s.AdminId)
-              .OnDelete(DeleteBehavior.Restrict);
+              .HasForeignKey(s => s.AdminId);
 
             modelBuilder.Entity<Resign>()
              .HasOne(u => u.Admin)
              .WithMany(u => u.Resign_admin)
-             .HasForeignKey(s => s.AdminId)
-             .OnDelete(DeleteBehavior.Restrict);
+             .HasForeignKey(s => s.AdminId);
 
             modelBuilder.Entity<Resign>()
               .HasOne(u => u.Staff)
               .WithMany(u => u.Resign_doctor)
-              .HasForeignKey(s => s.StaffId)
-              .OnDelete(DeleteBehavior.Restrict);
+              .HasForeignKey(s => s.StaffId);
             // 添加采购清单数据和采购项目数据
             var purchaseListData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/PurchaseListMockData.json");
             IList<PurchaseList> purchaseLists = JsonConvert.DeserializeObject<IList<PurchaseList>>(purchaseListData);

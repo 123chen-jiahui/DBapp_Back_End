@@ -98,7 +98,7 @@ namespace Hospital.Controllers
             Console.WriteLine("photo is {0}", photo);
             Console.WriteLine("aaaaahello");
                 Console.WriteLine("hello");
-                string newPhoto = PhotoUpload.UploadPhoto(photo, "customerPhoto/" + "5");
+                string newPhoto = PhotoUpload.UploadPhoto(photo, "staffPhoto/" + "5");
                 if (newPhoto != null)
                 {
                     return NoContent();

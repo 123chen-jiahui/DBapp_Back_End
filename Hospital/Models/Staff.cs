@@ -59,6 +59,29 @@ namespace Hospital.Models
         [ForeignKey("DepartmentId")]
         public Department Department { get; set; }
 
+
+        // 添加一些医生的基本信息
+        
+        [Column("POSITION")]
+        // [Required]
+        public Position Position { get; set; }
+
+        [Column("SKILLED")]
+        [MaxLength]
+        // [Required]
+        public string Skilled { get; set; }
+
+        [Column("INTRODUCTION")]
+        [MaxLength]
+        // [Required]
+        public string Introduction { get; set; }
+
+        [Column("PHOTO")]
+        // [Required]
+        [MaxLength(50)]
+        public string Photo { get; set; } // 医生图片的路径
+        
+
         public ICollection<Registration> Registrations { get; set; }/* = new List<Registration>();*/ 
         public ICollection<PurchaseList> PurchaseLists { get; set; }
 
