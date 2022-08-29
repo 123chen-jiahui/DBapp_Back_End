@@ -148,6 +148,8 @@ namespace Hospital.Controllers
         [HttpPost("register_staff")]
         public async Task<IActionResult> RegisterForStaff([FromBody] RegisterForStaffDto registerForStaffDto)
         {
+            Console.WriteLine("hello");
+            Console.WriteLine(registerForStaffDto);
             // 用户名和身份证号都不能相同
             if (await _userRepository.StaffExistsByGlobalIdAsync(registerForStaffDto.GlobalId))
             {

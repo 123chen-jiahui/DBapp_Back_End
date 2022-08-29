@@ -77,8 +77,8 @@ namespace Hospital.Models
         public string Introduction { get; set; }
 
         [Column("PHOTO")]
+        [MaxLength(100)]
         // [Required]
-        [MaxLength(50)]
         public string Photo { get; set; } // 医生图片的路径
         
 

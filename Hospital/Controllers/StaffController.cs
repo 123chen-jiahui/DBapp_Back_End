@@ -91,6 +91,29 @@ namespace Hospital.Controllers
             return NoContent();
         }
 
+        [HttpPut("uploadPhoto/{staffId}")]
+        public async Task<IActionResult> UploadPhoto([FromRoute] int staffId)
+        {
+            // 找到该医生
+            var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
+            if (staff == null)
+            {
+                return BadRequest("医生不存在");
+            }
+
+            // 获取图片
+            string photo = Request.Form["photo"];
+            Console.WriteLine("photo is {0}", photo);
+            string newPhoto = PhotoUpload.UploadPhoto(photo, "staffPhoto/" + staffId.ToString());
+            if (newPhoto != null)
+            {
+                staff.Photo = newPhoto;
+                await _userRepository.SaveAsync();
+                return NoContent();
+            }
+            return BadRequest("上传图片出错");
+        }
+
         [HttpPost("test")]
         public IActionResult Test()
         {
@@ -105,6 +128,31 @@ namespace Hospital.Controllers
                     // Console.WriteLine("successfully make newPhoto");
                 }
             return BadRequest();
+        }
+
+
+        // 完善医生信息
+        [HttpPut("refine/{staffId}")]
+        public async Task<IActionResult> Refine(
+            [FromRoute] int staffId,
+            [FromBody] StaffForRefine staffForRefine
+        )
+        {
+            // 找到该医生
+            var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
+            if (staff == null)
+            {
+                return BadRequest("医生不存在");
+            }
+
+            // 完善信息
+            staff.Introduction = staffForRefine.Introduction;
+            staff.Position = staffForRefine.Position;
+            staff.Skilled = staffForRefine.Skilled;
+
+            // 保存数据库
+            await _userRepository.SaveAsync();
+            return NoContent();
         }
     }
 }

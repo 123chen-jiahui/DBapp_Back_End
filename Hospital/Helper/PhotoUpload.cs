@@ -36,7 +36,8 @@ namespace Hospital.Helper
                 string imgurl = "https://tongjihospital-data.oss-cn-shanghai.aliyuncs.com/" + objectName;
 
                 Console.WriteLine("Put object succeeded");
-                return imgurl; // 返回url
+                // return imgurl; // 返回url
+                return objectName; // 返回url（不包括域名）
             }
             catch (Exception ex)
             {
