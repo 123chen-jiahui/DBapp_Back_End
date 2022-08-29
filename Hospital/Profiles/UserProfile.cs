@@ -44,7 +44,27 @@ namespace Hospital.Profiles
             }
             else 
             {
-                return "采购员";
+                return "订单前台";
+            }
+        }
+
+        public string GetPosition(Position position)
+        {
+            if (position == Position.fuzhuren)
+            {
+                return "副主任";
+            }
+            else if (position == Position.shixi)
+            {
+                return "实习医生";
+            }
+            else if (position == Position.zhuren)
+            {
+                return "主任";
+            }
+            else
+            {
+                return "主治医生";
             }
         }
         public UserProfile()
@@ -64,6 +84,11 @@ namespace Hospital.Profiles
                  .ForMember(
                     dest => dest.Role,
                     opt => opt.MapFrom(src => GetRole(src.Role))
+                    )
+                 .ForMember(
+                    dest => dest.Position,
+                    opt => opt.MapFrom(src => GetPosition(src.Position))
+
             );
             CreateMap<GuahaoDto, Registration>();
 
