@@ -147,9 +147,16 @@ namespace Hospital.Services
         }
         public async Task<IEnumerable<MedicalRecord>> GetMedicalRecordByMedicalRecordIdAsync(int patientId)
         {
-            return await _context.MedicalRecords
+            /*return await _context.MedicalRecords
                 .Where(mr => mr.PatientId == patientId)
-                .ToListAsync();
+                .ToListAsync();*/
+
+            IQueryable<MedicalRecord> result = _context.MedicalRecords;
+            result = result.Include(mr => mr.Staff).Where(mr => mr.PatientId == patientId);
+            result = result.OrderByDescending(mr => mr.DiagnosisTime);
+            // IQueryable<Order> result_reversed = result.Reverse();
+
+            return await result.ToListAsync(); 
         }
         public void AddMedicalRecord(MedicalRecord medicalRecord)
         {

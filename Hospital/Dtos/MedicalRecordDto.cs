@@ -10,5 +10,6 @@ namespace Hospital.Dtos
         public int StaffId { get; set; }
         public DateTime DiagnosisTime { get; set; }     //诊断时间
         public string DiagnosticResult { get; set; }   //诊断结果
+        public StaffDto staff { get; set; }
     }
 }

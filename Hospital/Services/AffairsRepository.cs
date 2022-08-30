@@ -74,7 +74,13 @@ namespace Hospital.Services
 
         public async Task<IEnumerable<Registration>> GetRegistrationsAsync(int patientId)
         {
-            return await _context.Registrations.Where(r => r.PatientId == patientId).ToListAsync();
+            // return await _context.Registrations.Include(r => r.Staff).Where(r => r.PatientId == patientId).ToListAsync();
+
+            IQueryable<Registration> result = _context.Registrations;
+            result = result.Include(r => r.Staff).Where(r => r.PatientId == patientId);
+            result = result.OrderByDescending(r => r.CreateDateLocal);
+
+            return await result.ToListAsync();
         }
 
         // waitline
