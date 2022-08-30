@@ -22,5 +22,2525 @@
     "Inventory": 350,
     "Indications": "用于外感风热所致的咳嗽",
     "Manufacturer": "太极集团重庆涪陵制药厂有限公司"
+  },
+  {
+    "Id": "H20043559",
+    "Name": "注射用氨苄西林钠氯唑西林钠",
+    "Indications": "无",
+    "Manufacturer": "瑞阳制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z33021087",
+    "Name": "肾宝合剂",
+    "Indications": "无",
+    "Manufacturer": "杭州天目山药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20064521",
+    "Name": "注射用胞磷胆碱钠",
+    "Indications": "无",
+    "Manufacturer": "北京四环制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32026184",
+    "Name": "葡萄糖氯化钠注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏大红鹰恒顺药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20067528",
+    "Name": "三磷酸胞苷二钠注射液",
+    "Indications": "无",
+    "Manufacturer": "金陵药业股份有限公司南京金陵制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20020245",
+    "Name": "美洛昔康分散片",
+    "Indications": "无",
+    "Manufacturer": "海南全星制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20150007",
+    "Name": "对乙酰氨基酚维生素C泡腾片",
+    "Indications": "无",
+    "Manufacturer": "天津汉瑞药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020182",
+    "Name": "牛黄千金散",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53022099",
+    "Name": "吉他霉素片",
+    "Indications": "无",
+    "Manufacturer": "昆药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23022970",
+    "Name": "吡拉西坦注射液",
+    "Indications": "无",
+    "Manufacturer": "哈药集团三精制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20070047",
+    "Name": "盐酸氨溴索葡萄糖注射液",
+    "Indications": "无",
+    "Manufacturer": "黑龙江中桂制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H12020234",
+    "Name": "枸橼酸喷托维林片",
+    "Indications": "无",
+    "Manufacturer": "天津力生制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z10950012",
+    "Name": "人工牛黄",
+    "Indications": "无",
+    "Manufacturer": "昆明梓橦宫全新生物制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20065750",
+    "Name": "盐酸特比萘芬乳膏",
+    "Indications": "无",
+    "Manufacturer": "锦州本天药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20052335",
+    "Name": "注射用二氯醋酸二异丙胺葡萄糖酸钠",
+    "Indications": "无",
+    "Manufacturer": "重庆药友制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H41021902",
+    "Name": "甲硝唑片",
+    "Indications": "无",
+    "Manufacturer": "河南大新药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20058553",
+    "Name": "帕司烟肼片",
+    "Indications": "无",
+    "Manufacturer": "贵州神奇药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H12020165",
+    "Name": "甲硝唑片",
+    "Indications": "无",
+    "Manufacturer": "天津力生制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20020342",
+    "Name": "阿奇霉素注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏吴中医药集团有限公司苏州制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20027944",
+    "Name": "银杏叶片",
+    "Indications": "无",
+    "Manufacturer": "海南亚洲制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021310",
+    "Name": "益脉康片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z37020580",
+    "Name": "鸢都感冒颗粒",
+    "Indications": "无",
+    "Manufacturer": "山东华洋制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20110013",
+    "Name": "替米沙坦氢氯噻嗪片",
+    "Indications": "无",
+    "Manufacturer": "湖北舒邦药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45020017",
+    "Name": "壮腰健肾丸",
+    "Indications": "无",
+    "Manufacturer": "广西梧州三鹤药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20027403",
+    "Name": "参苏丸",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20073165",
+    "Name": "硫酸依替米星氯化钠注射液",
+    "Indications": "无",
+    "Manufacturer": "福安药业集团宁波天衡制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021589",
+    "Name": "化风丹",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53020929",
+    "Name": "乳酸菌素片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20213002",
+    "Name": "利奈唑胺葡萄糖注射液",
+    "Indications": "无",
+    "Manufacturer": "赤峰源生药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23023522",
+    "Name": "盐酸土霉素片",
+    "Indications": "无",
+    "Manufacturer": "黑龙江省地纳制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20060338",
+    "Name": "注射用头孢唑肟钠",
+    "Indications": "无",
+    "Manufacturer": "苏州二叶制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20026736",
+    "Name": "桔远止咳片",
+    "Indications": "无",
+    "Manufacturer": "广西大海阳光药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20153258",
+    "Name": "坎地沙坦酯",
+    "Indications": "无",
+    "Manufacturer": "浙江天宇药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45022204",
+    "Name": "罗汉果止咳糖浆",
+    "Indications": "无",
+    "Manufacturer": "广西大力神制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20080179",
+    "Name": "头孢泊肟酯干混悬剂",
+    "Indications": "无",
+    "Manufacturer": "广州南新制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20130093",
+    "Name": "盐酸右美托咪定注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏恒瑞医药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020580",
+    "Name": "朱砂安神丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23022097",
+    "Name": "乙肝解毒胶囊",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020612",
+    "Name": "保胎丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020199",
+    "Name": "回天再造丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44021124",
+    "Name": "醋酸泼尼松片",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44020690",
+    "Name": "藿香正气水",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44020971",
+    "Name": "保儿安颗粒",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44020639",
+    "Name": "金银花露",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20063166",
+    "Name": "盐酸昂丹司琼注射液",
+    "Indications": "无",
+    "Manufacturer": "山东北大高科华泰制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44021135",
+    "Name": "盐酸左旋咪唑片",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44021134",
+    "Name": "维生素C片",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20057284",
+    "Name": "脂肪乳注射液(C14～24)",
+    "Indications": "无",
+    "Manufacturer": "新疆华世丹药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z33020496",
+    "Name": "小儿肠胃康颗粒",
+    "Indications": "无",
+    "Manufacturer": "温州海鹤药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020281",
+    "Name": "肌苷口服溶液",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H19993316",
+    "Name": "复方氨基酸注射液 (14AA)",
+    "Indications": "无",
+    "Manufacturer": "武汉久安药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45020426",
+    "Name": "五味子颗粒",
+    "Indications": "无",
+    "Manufacturer": "广西梧州制药(集团)股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45021911",
+    "Name": "紫雪散",
+    "Indications": "无",
+    "Manufacturer": "广西梧州制药(集团)股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20055402",
+    "Name": "羚羊清肺散",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45022074",
+    "Name": "元胡止痛片",
+    "Indications": "无",
+    "Manufacturer": "广西世彪药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020344",
+    "Name": "风油精",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021516",
+    "Name": "田七花叶颗粒",
+    "Indications": "无",
+    "Manufacturer": "云南铭鼎药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H41024793",
+    "Name": "富马酸异丙吡仑片",
+    "Indications": "无",
+    "Manufacturer": "河南润弘制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021397",
+    "Name": "八珍益母丸",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021412",
+    "Name": "复方黄连素片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020324",
+    "Name": "土霉素片",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020074",
+    "Name": "硫酸庆大霉素注射液",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20113280",
+    "Name": "盐酸特比萘芬喷雾剂",
+    "Indications": "无",
+    "Manufacturer": "山东京卫制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z32020938",
+    "Name": "强力枇杷露",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20054651",
+    "Name": "小儿清热止咳合剂(小儿清热止咳口服液)",
+    "Indications": "无",
+    "Manufacturer": "瑞福祥药业(广西)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020657",
+    "Name": "百合固金丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020694",
+    "Name": "清眩丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20027298",
+    "Name": "藿香正气丸",
+    "Indications": "无",
+    "Manufacturer": "黑龙江参鸽药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20050881",
+    "Name": "注射用乙酰谷酰胺",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨誉衡制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23020106",
+    "Name": "注射用尿激酶",
+    "Indications": "无",
+    "Manufacturer": "黑龙江迪龙制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44021888",
+    "Name": "苯巴比妥钠注射液",
+    "Indications": "无",
+    "Manufacturer": "广东邦民制药厂有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H22022764",
+    "Name": "凝血酶冻干粉",
+    "Indications": "无",
+    "Manufacturer": "广东星昊药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025387",
+    "Name": "红霉素栓",
+    "Indications": "无",
+    "Manufacturer": "江苏远恒药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32026101",
+    "Name": "制霉素阴道栓",
+    "Indications": "无",
+    "Manufacturer": "江苏远恒药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20044436",
+    "Name": "陈香露白露片",
+    "Indications": "无",
+    "Manufacturer": "广西慧宝源医药科技有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20023723",
+    "Name": "注射用青霉素钾",
+    "Indications": "无",
+    "Manufacturer": "广西慧宝源医药科技有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22025248",
+    "Name": "化毒丸",
+    "Indications": "无",
+    "Manufacturer": "吉林市鹿王制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22023002",
+    "Name": "桂附地黄丸",
+    "Indications": "无",
+    "Manufacturer": "吉林市鹿王制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20044964",
+    "Name": "丙氨酰谷氨酰胺注射液",
+    "Indications": "无",
+    "Manufacturer": "重庆莱美药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H62020059",
+    "Name": "双嘧达莫片",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021999",
+    "Name": "藻酸双酯钠片",
+    "Indications": "无",
+    "Manufacturer": "黑龙江鼎恒升药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020680",
+    "Name": "小活络丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20203449",
+    "Name": "注射用艾司奥美拉唑钠",
+    "Indications": "无",
+    "Manufacturer": "浙江尖峰药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020621",
+    "Name": "清肺抑火丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20059614",
+    "Name": "木糖醇注射液",
+    "Indications": "无",
+    "Manufacturer": "兰西哈三联制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021651",
+    "Name": "金匮肾气丸",
+    "Indications": "无",
+    "Manufacturer": "黑龙江葵花药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20059038",
+    "Name": "注射用盐酸平阳霉素",
+    "Indications": "无",
+    "Manufacturer": "瀚晖制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H61023129",
+    "Name": "甘露醇注射液",
+    "Indications": "无",
+    "Manufacturer": "陕西必康制药集团控股有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20003300",
+    "Name": "甘露醇注射液",
+    "Indications": "无",
+    "Manufacturer": "上海百特医疗用品有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20025211",
+    "Name": "香藤胶囊",
+    "Indications": "无",
+    "Manufacturer": "昆明康奇堂制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53020964",
+    "Name": "头孢氨苄片",
+    "Indications": "无",
+    "Manufacturer": "云南铭鼎药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23020397",
+    "Name": "盐酸吡硫醇片",
+    "Indications": "无",
+    "Manufacturer": "黑龙江福和制药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021436",
+    "Name": "大黄碳酸氢钠片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021623",
+    "Name": "豆腐果苷片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021433",
+    "Name": "盐酸小檗碱片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021431",
+    "Name": "妇舒丸",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021190",
+    "Name": "人参健脾丸",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42021451",
+    "Name": "垂阴茶糖浆",
+    "Indications": "无",
+    "Manufacturer": "武汉太福制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20173044",
+    "Name": "葡萄糖注射液",
+    "Indications": "无",
+    "Manufacturer": "浙江天瑞药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20056756",
+    "Name": "吉他霉素片",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53020918",
+    "Name": "清凉油",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H11022351",
+    "Name": "注射用糜蛋白酶",
+    "Indications": "无",
+    "Manufacturer": "华润双鹤药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H11021629",
+    "Name": "胃蛋白酶片",
+    "Indications": "无",
+    "Manufacturer": "北京赛而生物药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020284",
+    "Name": "对氨基水杨酸钠肠溶片",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20059385",
+    "Name": "苦参碱阴道膨胀栓",
+    "Indications": "无",
+    "Manufacturer": "海南森祺制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020804",
+    "Name": "回春如意胶囊",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨合佳制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z19993262",
+    "Name": "通宣理肺丸(浓缩丸)",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021778",
+    "Name": "注射用抗肿瘤免疫核糖核酸",
+    "Indications": "无",
+    "Manufacturer": "云南盟生药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20065462",
+    "Name": "注射用头孢唑肟钠",
+    "Indications": "无",
+    "Manufacturer": "福安药业集团庆余堂制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20065461",
+    "Name": "注射用头孢唑肟钠",
+    "Indications": "无",
+    "Manufacturer": "福安药业集团庆余堂制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42021325",
+    "Name": "壮骨木瓜酒",
+    "Indications": "无",
+    "Manufacturer": "李时珍医药集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H42022419",
+    "Name": "甘草锌胶囊",
+    "Indications": "无",
+    "Manufacturer": "宜昌人福药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H19993313",
+    "Name": "复方氨基酸注射液 (18AA)",
+    "Indications": "无",
+    "Manufacturer": "武汉久安药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H14020820",
+    "Name": "复方乙酰水杨酸片",
+    "Indications": "无",
+    "Manufacturer": "山西正来制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021489",
+    "Name": "雪上一枝蒿速效止痛搽剂",
+    "Indications": "无",
+    "Manufacturer": "云南维和药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021171",
+    "Name": "左旋多巴",
+    "Indications": "无",
+    "Manufacturer": "楚雄云植药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021973",
+    "Name": "盐酸羟苄唑",
+    "Indications": "无",
+    "Manufacturer": "楚雄云植药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32020017",
+    "Name": "诺氟沙星胶囊",
+    "Indications": "无",
+    "Manufacturer": "江苏聚荣制药集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z65020102",
+    "Name": "小活络丸",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20026574",
+    "Name": "蒿蓝感冒颗粒",
+    "Indications": "无",
+    "Manufacturer": "新疆西部加斯特药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20026677",
+    "Name": "妇科调经颗粒",
+    "Indications": "无",
+    "Manufacturer": "李时珍医药集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H33021020",
+    "Name": "注射用绒促性素",
+    "Indications": "无",
+    "Manufacturer": "宁波人健药业集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "B20021011",
+    "Name": "化瘀固精合剂",
+    "Indications": "无",
+    "Manufacturer": "新奇康药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20026712",
+    "Name": "冰七片",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z65020112",
+    "Name": "雪莲注射液",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H33020775",
+    "Name": "磷酸腺嘌呤",
+    "Indications": "无",
+    "Manufacturer": "浙江海正药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z65020012",
+    "Name": "西帕依固龈液",
+    "Indications": "无",
+    "Manufacturer": "新奇康药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20043923",
+    "Name": "注射用头孢匹胺钠",
+    "Indications": "无",
+    "Manufacturer": "瑞阳制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H10970401",
+    "Name": "氨酚伪麻片(Ⅱ)",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20103787",
+    "Name": "注射用头孢西丁钠",
+    "Indications": "无",
+    "Manufacturer": "悦康药业集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44023936",
+    "Name": "凝血酶冻干粉",
+    "Indications": "无",
+    "Manufacturer": "珠海同源药业有限公司(药品上市许可持有人)",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23022625",
+    "Name": "注射用穿琥宁",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨三联药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020252",
+    "Name": "阑尾消炎片",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021777",
+    "Name": "注射用七叶皂苷钠",
+    "Indications": "无",
+    "Manufacturer": "黑龙江迪龙制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20044322",
+    "Name": "注射用穿琥宁",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨三联药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021103",
+    "Name": "艾司唑仑片",
+    "Indications": "无",
+    "Manufacturer": "哈高科白天鹅药业集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20013341",
+    "Name": "注射用磷霉素钠",
+    "Indications": "无",
+    "Manufacturer": "哈药集团三精明水药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021276",
+    "Name": "双嘧达莫片",
+    "Indications": "无",
+    "Manufacturer": "哈高科白天鹅药业集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H19999109",
+    "Name": "注射用磷霉素钠",
+    "Indications": "无",
+    "Manufacturer": "哈药集团三精明水药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021084",
+    "Name": "去痛片",
+    "Indications": "无",
+    "Manufacturer": "哈高科白天鹅药业集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H45020648",
+    "Name": "羧甲淀粉钠溶液",
+    "Indications": "无",
+    "Manufacturer": "广西南宁百会药业集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021614",
+    "Name": "盐酸林可霉素片",
+    "Indications": "无",
+    "Manufacturer": "哈高科白天鹅药业集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42021546",
+    "Name": "复方丹参片",
+    "Indications": "无",
+    "Manufacturer": "湖北炎黄本草药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z13020742",
+    "Name": "小儿退热合剂",
+    "Indications": "无",
+    "Manufacturer": "湖北炎黄本草药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20059918",
+    "Name": "氨酪酸注射液",
+    "Indications": "无",
+    "Manufacturer": "湖北兴华制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20058819",
+    "Name": "注射用单磷酸阿糖腺苷",
+    "Indications": "无",
+    "Manufacturer": "武汉华龙生物制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H42022456",
+    "Name": "萘普生注射液",
+    "Indications": "无",
+    "Manufacturer": "湖北兴华制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020323",
+    "Name": "益肾液",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020474",
+    "Name": "茵陈酒",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020550",
+    "Name": "附桂紫金膏",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020833",
+    "Name": "参苓白术散",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20090877",
+    "Name": "肾康宁胶囊",
+    "Indications": "无",
+    "Manufacturer": "江苏黄河药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20067350",
+    "Name": "胞磷胆碱钠注射液",
+    "Indications": "无",
+    "Manufacturer": "苏州天马医药集团天吉生物制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44021131",
+    "Name": "去痛片",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z11021070",
+    "Name": "藿香正气丸",
+    "Indications": "无",
+    "Manufacturer": "北京勃然制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20103564",
+    "Name": "盐酸纳洛酮注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏吴中医药集团有限公司苏州制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021659",
+    "Name": "五苓散",
+    "Indications": "无",
+    "Manufacturer": "黑龙江葵花药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23020642",
+    "Name": "土霉素片",
+    "Indications": "无",
+    "Manufacturer": "哈药集团制药总厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20060319",
+    "Name": "注射用盐酸头孢吡肟",
+    "Indications": "无",
+    "Manufacturer": "苏州东瑞制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020334",
+    "Name": "人参健脾丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021655",
+    "Name": "清瘟解毒丸",
+    "Indications": "无",
+    "Manufacturer": "黑龙江葵花药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021658",
+    "Name": "五福化毒丸",
+    "Indications": "无",
+    "Manufacturer": "黑龙江葵花药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021597",
+    "Name": "桑菊感冒合剂",
+    "Indications": "无",
+    "Manufacturer": "哈药集团中药二厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H45020172",
+    "Name": "硝苯地平片",
+    "Indications": "无",
+    "Manufacturer": "广西两面针亿康药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22021503",
+    "Name": "舒肝丸",
+    "Indications": "无",
+    "Manufacturer": "龙晖药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20063298",
+    "Name": "复方南板蓝根片",
+    "Indications": "无",
+    "Manufacturer": "云南通大生物药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53020717",
+    "Name": "硫酸妥布霉素注射液",
+    "Indications": "无",
+    "Manufacturer": "昆药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45021205",
+    "Name": "妇科白凤片",
+    "Indications": "无",
+    "Manufacturer": "广西万通制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021184",
+    "Name": "维生素C片",
+    "Indications": "无",
+    "Manufacturer": "昆药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021857",
+    "Name": "复方氨酚那敏颗粒",
+    "Indications": "无",
+    "Manufacturer": "昆药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53021664",
+    "Name": "灭菌注射用水",
+    "Indications": "无",
+    "Manufacturer": "昆药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53020665",
+    "Name": "血塞通注射液",
+    "Indications": "无",
+    "Manufacturer": "昆药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021652",
+    "Name": "木瓜丸",
+    "Indications": "无",
+    "Manufacturer": "黑龙江葵花药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20123021",
+    "Name": "桑菊感冒片",
+    "Indications": "无",
+    "Manufacturer": "云南云河药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020818",
+    "Name": "红花注射液",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨圣泰生物制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020920",
+    "Name": "附子理中丸(浓缩丸)",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020473",
+    "Name": "五加皮酒",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020771",
+    "Name": "风湿酒",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z36020278",
+    "Name": "抗宫炎片",
+    "Indications": "无",
+    "Manufacturer": "江西海尔思药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020553",
+    "Name": "阳和解凝膏",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20030553",
+    "Name": "注射用盐酸川芎嗪",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨三联药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z34020325",
+    "Name": "安神补心丸",
+    "Indications": "无",
+    "Manufacturer": "黄山市天目药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z11020251",
+    "Name": "散风活络丸(浓缩丸)",
+    "Indications": "无",
+    "Manufacturer": "北京同仁堂科技发展股份有限公司制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020472",
+    "Name": "风湿液",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z50020354",
+    "Name": "良附丸",
+    "Indications": "无",
+    "Manufacturer": "重庆希尔安药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20025176",
+    "Name": "伤疖膏",
+    "Indications": "无",
+    "Manufacturer": "重庆希尔安药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020440",
+    "Name": "京万红软膏",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z12020470",
+    "Name": "壮骨木瓜酒",
+    "Indications": "无",
+    "Manufacturer": "天津达仁堂京万红药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53020536",
+    "Name": "复方磺胺甲噁唑片",
+    "Indications": "无",
+    "Manufacturer": "云南傣药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H42022841",
+    "Name": "复方氨林巴比妥注射液",
+    "Indications": "无",
+    "Manufacturer": "天津金耀集团湖北天药药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32022714",
+    "Name": "红霉素肠溶片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32021811",
+    "Name": "卡马西平片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32021801",
+    "Name": "复方磺胺甲噁唑片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025338",
+    "Name": "谷维素片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025336",
+    "Name": "布洛芬片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025274",
+    "Name": "溴丙胺太林片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025273",
+    "Name": "盐酸小檗碱片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025271",
+    "Name": "马来酸氯苯那敏片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32024030",
+    "Name": "双嘧达莫片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32024029",
+    "Name": "舒必利片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020081",
+    "Name": "硫酸阿托品注射液",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20103427",
+    "Name": "罗红霉素颗粒",
+    "Indications": "无",
+    "Manufacturer": "湖北东信药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32020820",
+    "Name": "维生素K1注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏华阳制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z65020089",
+    "Name": "济生肾气丸",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z19994043",
+    "Name": "板蓝根颗粒",
+    "Indications": "无",
+    "Manufacturer": "新疆华世丹药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025344",
+    "Name": "维生素C片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32026416",
+    "Name": "胱氨酸片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H13023782",
+    "Name": "氨咖黄敏胶囊",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020055",
+    "Name": "小儿脐风散",
+    "Indications": "无",
+    "Manufacturer": "甘肃省西峰制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "S10950009",
+    "Name": "人血白蛋白",
+    "Indications": "无",
+    "Manufacturer": "华兰生物工程股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020060",
+    "Name": "一捻金",
+    "Indications": "无",
+    "Manufacturer": "甘肃省西峰制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20025872",
+    "Name": "柴银感冒颗粒",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20046485",
+    "Name": "阿司匹林肠溶片",
+    "Indications": "无",
+    "Manufacturer": "广西慧宝源医药科技有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22025276",
+    "Name": "八珍益母丸",
+    "Indications": "无",
+    "Manufacturer": "吉林市鹿王制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22022995",
+    "Name": "复方羊角颗粒",
+    "Indications": "无",
+    "Manufacturer": "吉林市鹿王制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z19994031",
+    "Name": "红花油",
+    "Indications": "无",
+    "Manufacturer": "湖北东信药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42020238",
+    "Name": "雪梨膏",
+    "Indications": "无",
+    "Manufacturer": "湖北东信药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42021312",
+    "Name": "藿香正气水",
+    "Indications": "无",
+    "Manufacturer": "湖北东信药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20110078",
+    "Name": "拉米夫定胶囊",
+    "Indications": "无",
+    "Manufacturer": "北京福元医药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021675",
+    "Name": "三七胶囊",
+    "Indications": "无",
+    "Manufacturer": "云南铭鼎药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53021318",
+    "Name": "朱砂安神丸",
+    "Indications": "无",
+    "Manufacturer": "云南白药集团大理药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20044494",
+    "Name": "乳核内消液",
+    "Indications": "无",
+    "Manufacturer": "北京麦迪海药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42021850",
+    "Name": "藿胆丸",
+    "Indications": "无",
+    "Manufacturer": "武汉太福制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20063798",
+    "Name": "康尔心胶囊",
+    "Indications": "无",
+    "Manufacturer": "北京宝树堂科技药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z45021439",
+    "Name": "罗汉果玉竹颗粒",
+    "Indications": "无",
+    "Manufacturer": "桂林葛仙翁药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20063553",
+    "Name": "小儿麻甘颗粒",
+    "Indications": "无",
+    "Manufacturer": "云南永安制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H45020178",
+    "Name": "硫酸沙丁胺醇片",
+    "Indications": "无",
+    "Manufacturer": "广西两面针亿康药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42020239",
+    "Name": "阿归养血糖浆",
+    "Indications": "无",
+    "Manufacturer": "湖北东信药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H53020348",
+    "Name": "硫酸卡那霉素注射液",
+    "Indications": "无",
+    "Manufacturer": "楚雄和创药业有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20065946",
+    "Name": "氟康唑胶囊",
+    "Indications": "无",
+    "Manufacturer": "苏州俞氏药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H36020130",
+    "Name": "布洛芬片",
+    "Indications": "无",
+    "Manufacturer": "江西康恩贝中药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H41023855",
+    "Name": "马来酸氯苯那敏片",
+    "Indications": "无",
+    "Manufacturer": "天方药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20213255",
+    "Name": "厄贝沙坦氢氯噻嗪片",
+    "Indications": "无",
+    "Manufacturer": "江苏万高药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025866",
+    "Name": "盐酸消旋山莨菪碱注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏悦兴药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20150060",
+    "Name": "达托霉素",
+    "Indications": "无",
+    "Manufacturer": "海正药业(杭州)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20026057",
+    "Name": "骨友灵巴布膏",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20065821",
+    "Name": "阿奇霉素胶囊",
+    "Indications": "无",
+    "Manufacturer": "世贸天阶制药(江苏)有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44023934",
+    "Name": "凝血酶冻干粉",
+    "Indications": "无",
+    "Manufacturer": "珠海同源药业有限公司(药品上市许可持有人)",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44023937",
+    "Name": "凝血酶冻干粉",
+    "Indications": "无",
+    "Manufacturer": "珠海同源药业有限公司(药品上市许可持有人)",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20060834",
+    "Name": "蒙脱石混悬液",
+    "Indications": "无",
+    "Manufacturer": "南京白敬宇制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20066683",
+    "Name": "鬼臼毒素软膏",
+    "Indications": "无",
+    "Manufacturer": "沈阳绿洲制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20060905",
+    "Name": "磷酸氟达拉滨",
+    "Indications": "无",
+    "Manufacturer": "南京海润医药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44024001",
+    "Name": "肌苷片",
+    "Indications": "无",
+    "Manufacturer": "广东联康药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44020105",
+    "Name": "吐泻肚痛胶囊",
+    "Indications": "无",
+    "Manufacturer": "广东嘉应制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z14021900",
+    "Name": "橘红丸",
+    "Indications": "无",
+    "Manufacturer": "山西天生制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "B20020792",
+    "Name": "丹苓补骨胶囊",
+    "Indications": "无",
+    "Manufacturer": "山西天生制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20050155",
+    "Name": "更昔洛韦钠",
+    "Indications": "无",
+    "Manufacturer": "南京海辰药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z33020928",
+    "Name": "板蓝根颗粒",
+    "Indications": "无",
+    "Manufacturer": "浙江国镜药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H33020969",
+    "Name": "头孢氨苄颗粒",
+    "Indications": "无",
+    "Manufacturer": "浙江国镜药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20153285",
+    "Name": "注射用哌拉西林钠他唑巴坦钠",
+    "Indications": "无",
+    "Manufacturer": "浙江金华康恩贝生物制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42021864",
+    "Name": "陈香露白露片",
+    "Indications": "无",
+    "Manufacturer": "武汉太福制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H33020145",
+    "Name": "琥乙红霉素颗粒",
+    "Indications": "无",
+    "Manufacturer": "浙江奥托康制药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z33020825",
+    "Name": "维C银翘片",
+    "Indications": "无",
+    "Manufacturer": "台州南峰药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20090829",
+    "Name": "肠炎宁咀嚼片",
+    "Indications": "无",
+    "Manufacturer": "浙江泰康药业集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020312",
+    "Name": "枸橼酸喷托维林片",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20046255",
+    "Name": "盐酸格拉司琼氯化钠注射液",
+    "Indications": "无",
+    "Manufacturer": "国药集团新疆制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H65020168",
+    "Name": "利巴韦林含片",
+    "Indications": "无",
+    "Manufacturer": "新疆银朵兰维药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20023367",
+    "Name": "六应丸",
+    "Indications": "无",
+    "Manufacturer": "上海雷允上药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20033224",
+    "Name": "注射用磷霉素钠",
+    "Indications": "无",
+    "Manufacturer": "哈药集团三精明水药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z42020666",
+    "Name": "益母草膏",
+    "Indications": "无",
+    "Manufacturer": "湖北炎黄本草药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z53020260",
+    "Name": "香丹注射液",
+    "Indications": "无",
+    "Manufacturer": "大理药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32023565",
+    "Name": "葡萄糖氯化钠注射液",
+    "Indications": "无",
+    "Manufacturer": "江苏鹏鹞药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020820",
+    "Name": "感冒退热颗粒",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z33020621",
+    "Name": "丹参片",
+    "Indications": "无",
+    "Manufacturer": "台州南峰药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H41024264",
+    "Name": "马来酸氯苯那敏片",
+    "Indications": "无",
+    "Manufacturer": "河南大新药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H32025343",
+    "Name": "维生素B6片",
+    "Indications": "无",
+    "Manufacturer": "无锡济煜山禾药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z14021292",
+    "Name": "龟甲胶",
+    "Indications": "无",
+    "Manufacturer": "山西天生制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20025224",
+    "Name": "元胡胃舒胶囊",
+    "Indications": "无",
+    "Manufacturer": "山西天生制药有限责任公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H44021133",
+    "Name": "维生素B6片",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44023215",
+    "Name": "慢肾宝合剂",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20103456",
+    "Name": "葡萄糖注射液",
+    "Indications": "无",
+    "Manufacturer": "万邦德制药集团有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z31020351",
+    "Name": "肾宝糖浆",
+    "Indications": "无",
+    "Manufacturer": "上海雷允上药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20003022",
+    "Name": "感冒退热颗粒",
+    "Indications": "无",
+    "Manufacturer": "海南中宝制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H45021669",
+    "Name": "大黄碳酸氢钠片",
+    "Indications": "无",
+    "Manufacturer": "广西古方药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23021913",
+    "Name": "杞菊地黄丸",
+    "Indications": "无",
+    "Manufacturer": "黑龙江参鸽药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44023162",
+    "Name": "复方川贝止咳糖浆",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20063159",
+    "Name": "颠茄片",
+    "Indications": "无",
+    "Manufacturer": "广西大海阳光药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44020721",
+    "Name": "蛇胆川贝散",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z44023603",
+    "Name": "蛇胆川贝液",
+    "Indications": "无",
+    "Manufacturer": "一力制药(罗定)有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20103549",
+    "Name": "氟比洛芬凝胶贴膏",
+    "Indications": "无",
+    "Manufacturer": "北京泰德制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20054896",
+    "Name": "注射用头孢噻肟钠",
+    "Indications": "无",
+    "Manufacturer": "悦康药业集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20045844",
+    "Name": "利巴韦林葡萄糖注射液",
+    "Indications": "无",
+    "Manufacturer": "山东华信制药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20054897",
+    "Name": "注射用头孢噻肟钠",
+    "Indications": "无",
+    "Manufacturer": "悦康药业集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20034114",
+    "Name": "注射用头孢噻肟钠",
+    "Indications": "无",
+    "Manufacturer": "深圳信立泰药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20110119",
+    "Name": "加替沙星滴眼液",
+    "Indications": "无",
+    "Manufacturer": "中国大冢制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020653",
+    "Name": "大山楂颗粒",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H33022579",
+    "Name": "羧甲司坦片",
+    "Indications": "无",
+    "Manufacturer": "浙江天瑞药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20183491",
+    "Name": "溴芬酸钠滴眼液",
+    "Indications": "无",
+    "Manufacturer": "齐鲁制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020786",
+    "Name": "维C银翘片",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z62020789",
+    "Name": "香砂养胃丸",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H45020310",
+    "Name": "注射用头孢拉定",
+    "Indications": "无",
+    "Manufacturer": "兰州佛慈制药股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23022020",
+    "Name": "吡拉西坦片",
+    "Indications": "无",
+    "Manufacturer": "上海皇象铁力蓝天制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20033310",
+    "Name": "注射用硫酸长春地辛",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨三联药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23022535",
+    "Name": "氨咖黄敏片",
+    "Indications": "无",
+    "Manufacturer": "黑龙江福和制药集团股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021467",
+    "Name": "葡萄糖注射液",
+    "Indications": "无",
+    "Manufacturer": "黑龙江乌苏里江制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021415",
+    "Name": "土霉素片",
+    "Indications": "无",
+    "Manufacturer": "黑龙江乌苏里江制药有限公司哈尔滨分公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23022071",
+    "Name": "参茸酒",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021658",
+    "Name": "维生素C片",
+    "Indications": "无",
+    "Manufacturer": "上海皇象铁力蓝天制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020671",
+    "Name": "大山楂丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020683",
+    "Name": "琥珀抱龙丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23022069",
+    "Name": "安宫牛黄散",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23022159",
+    "Name": "小青龙颗粒",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020666",
+    "Name": "十全大补丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23023118",
+    "Name": "盐酸奈福泮片",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20044824",
+    "Name": "注射用头孢哌酮钠舒巴坦钠",
+    "Indications": "无",
+    "Manufacturer": "哈药集团制药总厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20033071",
+    "Name": "牛黄清胃丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z20060052",
+    "Name": "前列泰颗粒",
+    "Indications": "无",
+    "Manufacturer": "广西古方药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020668",
+    "Name": "小儿太极丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22021436",
+    "Name": "紫蔻丸",
+    "Indications": "无",
+    "Manufacturer": "龙晖药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021832",
+    "Name": "甲酚皂溶液",
+    "Indications": "无",
+    "Manufacturer": "乐泰药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H35021004",
+    "Name": "复方乙酰水杨酸片",
+    "Indications": "无",
+    "Manufacturer": "福州海王福药制药有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z22021519",
+    "Name": "人参再造丸",
+    "Indications": "无",
+    "Manufacturer": "龙晖药业有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H20051236",
+    "Name": "骨肽氯化钠注射液",
+    "Indications": "无",
+    "Manufacturer": "哈尔滨三联药业股份有限公司",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "Z23020571",
+    "Name": "附子理中丸",
+    "Indications": "无",
+    "Manufacturer": "哈药集团世一堂制药厂",
+    "Price": 20,
+    "Inventory": 100
+  },
+  {
+    "Id": "H23021831",
+    "Name": "过氧化氢溶液",
+    "Indications": "无",
+    "Manufacturer": "乐泰药业有限公司",
+    "Price": 20,
+    "Inventory": 100
   }
 ]
