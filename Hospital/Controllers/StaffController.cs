@@ -78,7 +78,7 @@ namespace Hospital.Controllers
 
         // 删除员工
         [HttpDelete("{staffId}")]
-        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteStaff([FromRoute] int staffId)
         {
             var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
@@ -142,7 +142,7 @@ namespace Hospital.Controllers
             var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
             if (staff == null)
             {
-                return BadRequest("医生不存在");
+                return NotFound("医生不存在");
             }
 
             // 完善信息
