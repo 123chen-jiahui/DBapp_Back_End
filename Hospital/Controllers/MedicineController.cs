@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Hospital.Dtos;
+using Hospital.ResourceParameter;
 using Hospital.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -28,13 +29,15 @@ namespace Hospital.Controllers
         }
 
         // 医生根据关键词查找药品
+        // 需要设置分页
         [HttpGet]
         [Authorize(Roles = "Doctor")]
         public async Task<IActionResult> GetMedicines(
-            [FromQuery] string keyWord
+            [FromQuery] string keyWord,
+            [FromQuery] PageResourceParameter parameter
         )
         {
-            var medicine = await _resourceRepository.GetMedicinesAsync(keyWord);
+            var medicine = await _resourceRepository.GetMedicinesAsync(keyWord, parameter.PageNumber, parameter.PageSize);
 
             return Ok(_mapper.Map<IEnumerable<MedicineDto>>(medicine));
         }

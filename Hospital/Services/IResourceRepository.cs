@@ -1,4 +1,5 @@
-﻿using Hospital.Models;
+﻿using Hospital.Helper;
+using Hospital.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Hospital.Services
     public interface IResourceRepository
     {
         Task<Medicine> GetMedicineAsync(string medicineId);
-        Task<IEnumerable<Medicine>> GetMedicinesAsync(string keyWord);
+        Task<PaginationList<Medicine>> GetMedicinesAsync(string keyWord, int pageNumber, int pageSize);
         void AddShoppingCartItem(LineItem lineItem);
         Task<LineItem> GetShoppingCartItemByItemIdAsync(int lineItemId);
         void DeleteShoppingCartItem(LineItem lineItem);

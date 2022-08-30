@@ -1,4 +1,5 @@
 ﻿using Hospital.Database;
+using Hospital.Helper;
 using Hospital.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -22,9 +23,15 @@ namespace Hospital.Services
             return await _context.Medicine.Where(m => m.Id == medicineId).FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Medicine>> GetMedicinesAsync(string keyWord)
+        public async Task<PaginationList<Medicine>> GetMedicinesAsync(string keyWord, int pageNumber, int pageSize)
         {
-            return await _context.Medicine.Where(m => m.Name.Contains(keyWord)).ToListAsync();
+
+            IQueryable<Medicine> result = _context.Medicine;
+            result = result.Where(m => m.Name.Contains(keyWord));
+            return await PaginationList<Medicine>.CreateAsync(pageNumber, pageSize, result);
+
+
+            // return await _context.Medicine.Where(m => m.Name.Contains(keyWord)).ToListAsync();
         }
 
         public void AddShoppingCartItem(LineItem lineItem)
