@@ -18,6 +18,12 @@ namespace Hospital.Services
             _context = context;
         }
 
+        public async Task<int> CountMedinesAsync(string keyWord)
+        {
+            var medicines = await _context.Medicine.Where(m => m.Name.Contains(keyWord)).ToListAsync();
+            return medicines.Count();
+        }
+
         public async Task<Medicine> GetMedicineAsync(string medicineId)
         {
             return await _context.Medicine.Where(m => m.Id == medicineId).FirstOrDefaultAsync();

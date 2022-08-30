@@ -28,6 +28,21 @@ namespace Hospital.Controllers
             _mapper = mapper;
         }
 
+        // 取得满足关键词的药品数量
+        [HttpGet("count")]
+        [Authorize(Roles = "Doctor")]
+        public async Task<IActionResult> GetMedicinesCount(
+            [FromQuery] string keyWord    
+        )
+        {
+            var count = await _resourceRepository.CountMedinesAsync(keyWord);
+            if (count == 0)
+            {
+                return NotFound("未找到药品");
+            }
+            return Ok(count);
+        }
+
         // 医生根据关键词查找药品
         // 需要设置分页
         [HttpGet]
