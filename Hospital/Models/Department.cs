@@ -27,7 +27,7 @@ namespace Hospital.Models
         [Required]
         public string Phone { get; set; }
 
-        public ICollection<Staff> Staff { get; set; } = new List<Staff>();
-        public ICollection<Ward> Wards { get; set; } = new List<Ward>();
+        public ICollection<Staff> Staff { get; set; } /*= new List<Staff>();*/
+        public ICollection<Ward> Wards { get; set; } /*= new List<Ward>();*/
     }
 }

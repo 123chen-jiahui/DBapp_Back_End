@@ -33,5 +33,12 @@ namespace Hospital.Controllers
             var departments = await _resourRepository.GetDepartments();
             return Ok(_mapper.Map<IEnumerable<DepartmentDto>>(departments));
         }
+
+        [HttpGet("detail")]
+        public async Task<IActionResult> GetDepartmentsDetail()
+        {
+            var departmentsDetail = await _resourRepository.GetDepartmentsDetail();
+            return Ok(_mapper.Map<IEnumerable<DepartmentDetailDto>>(departmentsDetail));
+        }
     }
 }

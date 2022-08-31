@@ -13,6 +13,8 @@ namespace Hospital.Profiles
         public DepartmentProfile()
         {
             CreateMap<Department, DepartmentDto>();
+
+            CreateMap<Department, DepartmentDetailDto>();
         }
     }
 }
