@@ -89,6 +89,7 @@ namespace Hospital.Controllers
                 return BadRequest("只能预约三天内的挂号");
             }
 
+            // Console.WriteLine("staffid is {0} and day is {1}", staffId, day);
             // 找到该医生该天的schedul
             var schedule = await _affairsRepository.GetScheduleOfOneDay(staffId, day);
             int timeSlotId = schedule.TimeSlotId;

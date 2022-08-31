@@ -11,6 +11,6 @@ namespace Hospital.Dtos
         public string Name { get; set; }
         public string Building { get; set; }
         public string Phone { get; set; }
-        public ICollection<StaffDto> Staff { get; set; }
+        public ICollection<StaffWithScheduleDto> Staff { get; set; }
     }
 }

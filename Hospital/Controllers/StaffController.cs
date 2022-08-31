@@ -103,7 +103,7 @@ namespace Hospital.Controllers
 
             // 获取图片
             string photo = Request.Form["photo"];
-            Console.WriteLine("photo is {0}", photo);
+            // Console.WriteLine("photo is {0}", photo);
             string newPhoto = PhotoUpload.UploadPhoto(photo, "staffPhoto/" + staffId.ToString());
             if (newPhoto != null)
             {

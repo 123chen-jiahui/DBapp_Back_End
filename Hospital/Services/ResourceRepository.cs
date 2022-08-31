@@ -88,7 +88,9 @@ namespace Hospital.Services
 
         public async Task<IEnumerable<Department>> GetDepartmentsDetail()
         {
-            return await _context.Departments.Include(d => d.Staff).ToListAsync();
+            return await _context.Departments
+                .Include(d => d.Staff).ThenInclude(s => s.Schedules)
+                .ToListAsync();
         }
 
         public async Task<bool> SaveAsync()

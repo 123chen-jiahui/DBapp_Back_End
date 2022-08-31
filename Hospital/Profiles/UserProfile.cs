@@ -90,6 +90,24 @@ namespace Hospital.Profiles
                     opt => opt.MapFrom(src => GetPosition(src.Position))
 
             );
+            CreateMap<Staff, StaffWithScheduleDto>()
+                .ForMember(
+                    dest => dest.age,
+                    opt => opt.MapFrom(src => GetAge(src.Birthday))
+                    )
+                .ForMember(
+                    dest => dest.Gender,
+                    opt => opt.MapFrom(src => GetGender(src.Gender))
+                    )
+                 .ForMember(
+                    dest => dest.Role,
+                    opt => opt.MapFrom(src => GetRole(src.Role))
+                    )
+                 .ForMember(
+                    dest => dest.Position,
+                    opt => opt.MapFrom(src => GetPosition(src.Position))
+
+            );
             CreateMap<GuahaoDto, Registration>();
 
             CreateMap<Patient, PatientDto>()
