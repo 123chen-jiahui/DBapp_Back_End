@@ -160,3 +160,9 @@ $RECYCLE.BIN/
 
 # VisualStudioCode
 .vscode
+
+.dockerignore
+
+migrations/
+
+Dockerfile/
