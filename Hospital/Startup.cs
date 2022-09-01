@@ -65,6 +65,7 @@ namespace Hospital
             services.AddTransient<IResourceRepository, ResourceRepository>();
             services.AddTransient<IAffairsRepository, AffairsRepository>();
             services.AddTransient<IPurchaseListRepository, PurchaseListRepository>();
+            services.AddTransient<IArticleRepository, ArticleRepository>();
 
 
             services.AddDbContext<AppDbContext>(option => {
