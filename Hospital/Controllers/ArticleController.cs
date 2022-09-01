@@ -38,23 +38,23 @@ namespace Hospital.Controllers
 
         [HttpGet("{articleInfoId:Guid}")]
         [HttpHead]
-        public async Task<IActionResult> GetArticleDetailById(Guid Id)
+        public async Task<IActionResult> GetArticleDetailById(Guid articleInfoId)
         {
-            var articInfoFromRepo = await _articleRepository.GetArticleInfoByIdAsync(Id);
+            var articInfoFromRepo = await _articleRepository.GetArticleInfoByIdAsync(articleInfoId);
             if(articInfoFromRepo==null)
             {
                 return NotFound("未找到相关文稿信息");
             }
-            var articleContentFromRepo = await _articleRepository.GetArticleContentByIdAsync(Id);
+            var articleContentFromRepo = await _articleRepository.GetArticleContentByIdAsync(articleInfoId);
             if(articleContentFromRepo == null)
             {
                 return NotFound("未找到文稿内容");
             }
-            var articleImgsFromRepo = await _articleRepository.GetArticleImgByIdAsync(Id);
+            var articleImgsFromRepo = await _articleRepository.GetArticleImgByIdAsync(articleInfoId);
             //IEnumerable<string> articleImgsAdress = new IEnumerable<string>();
             List<string> articleImgsAdressList = new List<string>();
 
-            if (articleImgsFromRepo == null)
+            if (articleImgsFromRepo != null)
             {
                 foreach (var item in articleImgsFromRepo)
                 {
@@ -65,6 +65,7 @@ namespace Hospital.Controllers
             var articleDetail = new ArticleDetailDto
             {
                 Id = articInfoFromRepo.Id,
+                Title = articInfoFromRepo.Title,
                 Type = articInfoFromRepo.Type,
                 Author = articInfoFromRepo.Author,
                 Time = articInfoFromRepo.Time,
@@ -77,17 +78,52 @@ namespace Hospital.Controllers
         [HttpPost]
         public async Task<IActionResult> PostArticle([FromBody] ArticleForCreationDto articleForCreationDto)
         {
-            var articleInfoToRepo = _mapper.Map<ArticleInfo>(articleForCreationDto);
-            _articleRepository.AddArticleInfo(articleInfoToRepo);
-            articleInfoToRepo.Content.Id=articleInfoToRepo.Id;
-            _articleRepository.AddArticleContent(articleInfoToRepo.Content);
-            foreach (var item in articleInfoToRepo.articleImgs)
+            
+            var articleInfoToRepo = new ArticleInfo
             {
-                item.Id=articleInfoToRepo.Id;
-                _articleRepository.AddArticleImg(item);
+                Id = Guid.NewGuid(),
+                Title = articleForCreationDto.Title,
+                Type = articleForCreationDto.Type,
+                Author = articleForCreationDto.Author,
+                Time = articleForCreationDto.Time,
+                
+            };
+
+            _articleRepository.AddArticleInfo(articleInfoToRepo);
+            var articleContentToRepo = new ArticleContent
+            {
+                Id = articleInfoToRepo.Id,
+                Content = articleForCreationDto.Content,
+            };
+
+            _articleRepository.AddArticleContent(articleContentToRepo);
+            if (articleForCreationDto.ImgsURL != null && articleForCreationDto.ImgsURL.Count() > 0)
+            {
+                foreach (var item in articleForCreationDto.ImgsURL)
+                {
+                    var articleImgsToRepo = new ArticleImg
+                    {
+                        Id = articleInfoToRepo.Id,
+                        ImgAddress = item,
+                    };
+                    _articleRepository.AddArticleImg(articleImgsToRepo);
+                }
             }
             await _articleRepository.SaveAsync();
             return Ok(articleInfoToRepo.Id);
+        }
+
+        [HttpDelete("{articleInfoId:Guid}")]
+        public async Task<IActionResult> DeleteArticle(Guid articleInfoId)
+        {
+            var articleInfoFromRepo = await _articleRepository.GetArticleInfoByIdAsync(articleInfoId);
+            if(articleInfoFromRepo==null)
+            {
+                return NotFound("未找到该编号的文稿信息");
+            }
+            _articleRepository.DeleteArticle(articleInfoId);
+            await _articleRepository.SaveAsync();
+            return Ok();
         }
     }
 }

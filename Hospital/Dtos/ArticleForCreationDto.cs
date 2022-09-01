@@ -10,7 +10,9 @@ namespace Hospital.Dtos
         public string Author { get; set; }
         public long Time { get; set; }
         public string Type { get; set; }
-        public ArticleContent Content { get; set; }=new ArticleContent();
-        public IEnumerable<ArticleImg> articleImgs { get; set; }=new List<ArticleImg>();
+        public string Content { get; set; }
+        //public ArticleContent Content { get; set; }=new ArticleContent();
+        public IEnumerable<string> ImgsURL { get; set; }    
+        //public IEnumerable<ArticleImg> articleImgs { get; set; }=new List<ArticleImg>();
     }
 }
