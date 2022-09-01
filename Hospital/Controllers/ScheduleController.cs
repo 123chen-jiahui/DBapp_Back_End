@@ -2,6 +2,7 @@
 using Hospital.Dtos;
 using Hospital.Models;
 using Hospital.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace Hospital.Controllers
 
         // 获得员工排班信息
         [HttpGet("{staffId}", Name = "GetSchedule")]
+        [Authorize]
         // 身份验证
         public async Task<IActionResult> GetSchedule([FromRoute] int staffId)
         {
@@ -44,6 +46,7 @@ namespace Hospital.Controllers
 
         // 添加员工排班信息，以周为单位
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         // 身份验证
         public async Task<IActionResult> AddSchedule(
             [FromBody] ScheduleForCreationDto scheduleForCreationDto
@@ -98,6 +101,7 @@ namespace Hospital.Controllers
 
         // 更新员工排班信息
         [HttpPut("{staffId}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateSchedule(
             [FromRoute] int staffId,
             [FromBody] ScheduleForUpdationDto scheduleForUpdationDto

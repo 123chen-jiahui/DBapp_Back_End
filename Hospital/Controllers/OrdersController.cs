@@ -82,6 +82,7 @@ namespace Hospital.Controllers
 
         // 返回订单的数量，用于分页
         [HttpGet("forDoctor/{patientId}/count")]
+        [Authorize]
         public async Task<IActionResult> CountOrders([FromRoute] int patientId)
         {
             if (!(await _userRepository.PatientExistsByPatientIdAsync(patientId)))

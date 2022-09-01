@@ -31,7 +31,7 @@ namespace Hospital.Controllers
         // api/purchaselist
         // 查询某个职工负责的采购清单 //api/purchaselist?staffid={}
         [HttpGet]
-        [HttpHead]
+        [Authorize]
         public async Task<IActionResult> GetPurchaseLists([FromQuery] int staffid)
         {
             
@@ -46,7 +46,7 @@ namespace Hospital.Controllers
         // 根据采购清单编号获取清单数据
         // api/purchaselist/{purchaseListId}
         [HttpGet("{purchaseListId:Guid}",Name = "GetPurchaseListById")]
-        [HttpHead]
+        [Authorize]
         public async Task<IActionResult> GetPurchaseListByIdAsync(Guid purchaseListId)
         {
             var purchaselistFromRepo = await _purchaseListRepository.GetPurchaseListByIdAsync(purchaseListId);
@@ -60,6 +60,7 @@ namespace Hospital.Controllers
         // 获取某一采购清单的采购详细信息，具体购买的物品信息
         // api/purchaselist/{purchaseListId}/items
         [HttpGet("{purchaseListId:Guid}/items",Name = "GetPurchaseListItems")]
+        [Authorize]
         public async Task<IActionResult> GetPurchaseListItemsAsync(Guid purchaseListId)
         {
             if (!(await _purchaseListRepository.PurchaseListExistsAsync(purchaseListId)))
@@ -71,6 +72,7 @@ namespace Hospital.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreatePurchaseList([FromBody] PurchaseListForCreationDto purchaseListForCreationDto)
         {
             var PurchaseListModel = _mapper.Map<PurchaseList>(purchaseListForCreationDto);

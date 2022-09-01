@@ -27,6 +27,7 @@ namespace Hospital.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         // 身份验证
         public async Task<IActionResult> GetTimeSlots()
         {
@@ -35,6 +36,7 @@ namespace Hospital.Controllers
         }
 
         [HttpGet("{timeSlotId}", Name = "GetTimeSlot")]
+        [Authorize]
          // [Authorize(Roles = "Admin")] // 为方便起见，这里不加权限认证
         public async Task<IActionResult> GetTimeSlotById([FromRoute] int timeSlotId)
         {
@@ -48,7 +50,8 @@ namespace Hospital.Controllers
         }
 
         [HttpPost]
-         // [Authorize(Roles = "Admin")] // 为调试方便起见，这里不加权限认证
+        [Authorize(Roles = "Admin")]
+        // [Authorize(Roles = "Admin")] // 为调试方便起见，这里不加权限认证
         public async Task<IActionResult> CreateTimeSlot(
             [FromBody] TimeSlotForCreationDto timeSlotForCreationDto
         )

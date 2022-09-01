@@ -27,6 +27,7 @@ namespace Hospital.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         // [Authorize]
         public async Task<IActionResult> GetDepartments()
         {
@@ -35,6 +36,7 @@ namespace Hospital.Controllers
         }
 
         [HttpGet("detail")]
+        [Authorize]
         public async Task<IActionResult> GetDepartmentsDetail()
         {
             var departmentsDetail = await _resourRepository.GetDepartmentsDetail();

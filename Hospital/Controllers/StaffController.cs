@@ -41,6 +41,7 @@ namespace Hospital.Controllers
         }
 
         [HttpGet("{DepartmentId}")]
+        [Authorize]
         public async Task<IActionResult> GetStafffs(
             [FromRoute] int departmentId,
             [FromQuery] PageResourceParameter pageParameters
@@ -58,6 +59,7 @@ namespace Hospital.Controllers
 
         // 返回订单的数量，用于分页
         [HttpGet("{departmentId}/count")]
+        [Authorize]
         public async Task<IActionResult> CountStaff([FromRoute] int departmentId)
         {
             var count = await _userRepository.CountStaffAsync(departmentId);
@@ -78,7 +80,7 @@ namespace Hospital.Controllers
 
         // 删除员工
         [HttpDelete("{staffId}")]
-        // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteStaff([FromRoute] int staffId)
         {
             var staff = await _userRepository.GetStaffByStaffIdAsync(staffId);
@@ -92,6 +94,7 @@ namespace Hospital.Controllers
         }
 
         [HttpPut("uploadPhoto/{staffId}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UploadPhoto([FromRoute] int staffId)
         {
             // 找到该医生
@@ -133,6 +136,7 @@ namespace Hospital.Controllers
 
         // 完善医生信息
         [HttpPut("refine/{staffId}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Refine(
             [FromRoute] int staffId,
             [FromBody] StaffForRefine staffForRefine
