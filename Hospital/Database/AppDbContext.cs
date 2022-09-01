@@ -37,6 +37,9 @@ namespace Hospital.Database
         public DbSet<Order> Orders { get; set; }
         public DbSet<TimeSlot> TimeSlots { get; set; }
         public DbSet<WaitLine> WaitLines { get; set; }
+        public DbSet<ArticleInfo> ArticleInfos { get; set; }
+        public DbSet<ArticleContent> ArticleContents { get; set; }
+        public DbSet<ArticleImg> ArticleImgs { get; set; }
         // public DbSet<Staff_TimeSlot> Staff_TimeSlots { get; set; }
         // public DbSet<Staff_Room> Staff_Rooms { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
@@ -87,7 +90,8 @@ namespace Hospital.Database
                 .HasKey(st => new { st.Id, st.PatientId, st.StaffId });
             // 采购项目PurchaseListItem主码有两个属性，需要在此处设置
             modelBuilder.Entity<PurchaseListItem>().HasKey(pi => new { pi.ItemId, pi.PurchaseListId });
-
+            // 文章图片主码为两个属性
+            modelBuilder.Entity<ArticleImg>().HasKey(img => new { img.Id ,img.ImgAddress});
             /*modelBuilder.Entity<Staff_TimeSlot>()
                 .HasKey(st => new { st.StaffId, st.Day });*/
             // 添加科室数据
