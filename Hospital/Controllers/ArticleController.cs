@@ -36,21 +36,20 @@ namespace Hospital.Controllers
             return Ok(_mapper.Map<IEnumerable<ArticleInfoDto>>(articleInfoFromRepo));
         }
 
-        [HttpGet("{articleInfoId:Guid}")]
-        [HttpHead]
-        public async Task<IActionResult> GetArticleDetailById(Guid Id)
+        [HttpGet("{articleInfoId}")]
+        public async Task<IActionResult> GetArticleDetailById([FromRoute] Guid articleInfoId)
         {
-            var articInfoFromRepo = await _articleRepository.GetArticleInfoByIdAsync(Id);
+            var articInfoFromRepo = await _articleRepository.GetArticleInfoByIdAsync(articleInfoId);
             if(articInfoFromRepo==null)
             {
                 return NotFound("未找到相关文稿信息");
             }
-            var articleContentFromRepo = await _articleRepository.GetArticleContentByIdAsync(Id);
+            var articleContentFromRepo = await _articleRepository.GetArticleContentByIdAsync(articleInfoId);
             if(articleContentFromRepo == null)
             {
                 return NotFound("未找到文稿内容");
             }
-            var articleImgsFromRepo = await _articleRepository.GetArticleImgByIdAsync(Id);
+            var articleImgsFromRepo = await _articleRepository.GetArticleImgByIdAsync(articleInfoId);
             //IEnumerable<string> articleImgsAdress = new IEnumerable<string>();
             List<string> articleImgsAdressList = new List<string>();
 

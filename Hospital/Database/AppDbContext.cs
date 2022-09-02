@@ -145,6 +145,10 @@ namespace Hospital.Database
             IList<PurchaseListItem> purchaseListItems = JsonConvert.DeserializeObject<IList<PurchaseListItem>>(purchaseListItemData);
             modelBuilder.Entity<PurchaseListItem>().HasData(purchaseListItems);
 
+            // 添加articleInfo数据
+            var articleInfosData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/ArticleInfoMock.json");
+            IList<ArticleInfo> articleInfos = JsonConvert.DeserializeObject<IList<ArticleInfo>>(articleInfosData);
+            modelBuilder.Entity<ArticleInfo>().HasData(articleInfos);
 
             base.OnModelCreating(modelBuilder);
         }

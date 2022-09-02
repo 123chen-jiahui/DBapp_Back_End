@@ -166,3 +166,5 @@ $RECYCLE.BIN/
 migrations/
 
 Dockerfile
+
+*.vs/
