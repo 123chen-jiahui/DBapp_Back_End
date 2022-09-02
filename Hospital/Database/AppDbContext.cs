@@ -149,6 +149,14 @@ namespace Hospital.Database
             var articleInfosData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/ArticleInfoMock.json");
             IList<ArticleInfo> articleInfos = JsonConvert.DeserializeObject<IList<ArticleInfo>>(articleInfosData);
             modelBuilder.Entity<ArticleInfo>().HasData(articleInfos);
+	    
+            var articleContentData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/ArticleContentMock.json");
+            IList<ArticleContent> articleContentList = JsonConvert.DeserializeObject<IList<ArticleContent>>(articleContentData);
+            modelBuilder.Entity<ArticleContent>().HasData(articleContentList);
+
+            var articleImgsData = File.ReadAllText(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"/Database/ArticleImgsMock.json");
+            IList<ArticleImg> articleImgs = JsonConvert.DeserializeObject<IList<ArticleImg>>(articleImgsData);
+            modelBuilder.Entity<ArticleImg>().HasData(articleImgs);
 
             base.OnModelCreating(modelBuilder);
         }

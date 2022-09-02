@@ -31,6 +31,13 @@ namespace Hospital.Services
             _context.ArticleInfos.AddAsync(articleInfo);
         }
 
+        public void DeleteArticle(Guid Id)
+        {
+            ArticleInfo articleInfo = _context.ArticleInfos.FirstOrDefault(x => x.Id == Id);
+            _context.ArticleInfos.Remove(articleInfo);
+            //throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<ArticleInfo>> GetAllArticleInfosAsync()
         {
             return await _context.ArticleInfos.ToListAsync();

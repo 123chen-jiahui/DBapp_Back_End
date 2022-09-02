@@ -17,6 +17,7 @@ namespace Hospital.Services
         void AddArticleContent(ArticleContent articleContent);
         void AddArticleImg(ArticleImg articleImg);
 
+        void DeleteArticle(Guid Id);
         Task<bool> SaveAsync(); 
     }
 }
