@@ -28,6 +28,7 @@ namespace Hospital.Services
         // waitline
         Task AddWaitLineAsync(WaitLine waitLine);
         Task<IEnumerable<WaitLine>> GetWaitLinesAsync(int staffId, int day);
+        Task<IEnumerable<WaitLine>> GetWaitLinesDetailAsync(int staffId, int day);
 
 
         //请假

@@ -12,7 +12,7 @@ namespace Hospital.Controllers
 {
     [Route("article")]
     [ApiController]
-    public class ArticleController : Controller
+    public class ArticleController : ControllerBase
     {
         private readonly IArticleRepository _articleRepository;
         private IMapper _mapper;
@@ -77,7 +77,7 @@ namespace Hospital.Controllers
         [HttpPost]
         public async Task<IActionResult> PostArticle([FromBody] ArticleForCreationDto articleForCreationDto)
         {
-            
+            Console.WriteLine(articleForCreationDto);
             var articleInfoToRepo = new ArticleInfo
             {
                 Id = Guid.NewGuid(),

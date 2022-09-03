@@ -13,6 +13,7 @@ namespace Hospital.Profiles
         public WaitLineProfile()
         {
             CreateMap<WaitLine, WaitLineDto>();
+            CreateMap<WaitLine, WaitLineDetailDto>();
         }
     }
 }

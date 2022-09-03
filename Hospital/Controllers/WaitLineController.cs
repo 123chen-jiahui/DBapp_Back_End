@@ -53,5 +53,20 @@ namespace Hospital.Controllers
 
             return Ok(_mapper.Map<IEnumerable<WaitLineDto>>(waitLines));
         }
+
+        [HttpGet("detail/{day}")]
+        [Authorize]
+        public async Task<IActionResult> GetWaitLineDetail([FromRoute] int day)
+        {
+            var staffId = _httpContextAccessor
+                .HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            var waitLines = await _affairsRepository.GetWaitLinesDetailAsync(Convert.ToInt32(staffId), day);
+            if (waitLines == null || waitLines.Count() == 0)
+            {
+                return BadRequest("waitline不存在");
+            }
+            return Ok(_mapper.Map<IEnumerable<WaitLineDetailDto>>(waitLines));
+        }
     }
 }

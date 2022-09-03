@@ -13,5 +13,6 @@ namespace Hospital.Dtos
         public int Age { get; set; }
         public string Gender { get; set; }
         public ICollection<MedicalRecordDto> MedicalRecords { get; set; }
+        public ShoppingCartDto ShoppingCart { get; set; }
     }
 }

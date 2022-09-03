@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FakeXiecheng.API.Helper;
 using Hospital.Dtos;
 using Hospital.Models;
 using Hospital.ResourceParameter;
@@ -40,6 +41,56 @@ namespace Hospital.Controllers
             _resourceRepository = resourceRepository;
             _mapper = mapper;
             _httpClientFactory = httpClientFactory;
+        }
+
+        // 根据所选的药品生成订单
+        [HttpPost("{patientId}")]
+        // [Authorize(Roles = "Doctor")]
+        public async Task<IActionResult> CreatOrder(
+            [FromRoute] int patientId,
+            // [ModelBinder(BinderType = typeof(ArrayModelBinder))]
+            // [FromRoute] IEnumerable<string> medicines 
+            [FromBody] OrderForCreationDto medicines
+        )
+        {
+            Console.WriteLine(medicines.MedicineId.Count());
+            // 创建一个item空列表
+            ICollection<LineItem> lineItems = new List<LineItem>();
+            // LineItem[] lineItems = { };
+            // 创建orderid
+            Guid orderId = new Guid();
+
+            // 根据药品id查找药品，并生成lineitem，加入item列表中
+            foreach(string element in medicines.MedicineId)
+            {
+                var medicine = await _resourceRepository.GetMedicineAsync(element);
+                Console.WriteLine(element);
+                var lineItem = new LineItem()
+                {
+                    MedicineId = element,
+                    OrderId = orderId,
+                    Price = medicine.Price
+                };
+
+                lineItems.Add(lineItem);
+            }
+
+            // 创建订单
+            var order = new Order()
+            {
+                Id = orderId,
+                PatientId = patientId,
+                State = OrderStateEnum.Pending,
+                OrderItems = lineItems,
+                CreateDateUTC = DateTime.Now,
+                TransactionMetadata = "null"
+            };
+
+            // 保存数据
+            await _userRepository.AddOrderAsync(order);
+            await _userRepository.SaveAsync();
+
+            return Ok(_mapper.Map<OrderDto>(order));
         }
 
         // 查看历史订单

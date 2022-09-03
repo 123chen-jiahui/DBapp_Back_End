@@ -97,6 +97,18 @@ namespace Hospital.Services
             return await res.ToListAsync();
             // return await _context.WaitLines.Where(wl => wl.StaffId == staffId && wl.Day == day).ToListAsync();
         }
+
+        public async Task<IEnumerable<WaitLine>> GetWaitLinesDetailAsync(int staffId, int day)
+        {
+            IQueryable<WaitLine> res = _context.WaitLines
+                .Include(w => w.Patient).ThenInclude(p => p.ShoppingCart)
+                .Include(w => w.Patient).ThenInclude(p => p.MedicalRecords)
+                .Where(wl => wl.StaffId == staffId && wl.Day == day);
+
+            res = res.OrderBy(r => r.Order);
+            return await res.ToListAsync();
+        }
+
         public async Task<IEnumerable<Break>> GetBreaksByStaffIdAsync(int staffId)
         {
             IQueryable<Break> res = _context.Breaks.Where(wl => wl.StaffId == staffId);
