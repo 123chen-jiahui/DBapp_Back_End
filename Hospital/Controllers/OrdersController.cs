@@ -180,7 +180,7 @@ namespace Hospital.Controllers
             var httpClient = _httpClientFactory.CreateClient();
             string url = @"http://123.56.149.216/api/FakePaymentProcess?icode={0}&orderNumber={1}&returnFault={2}";
             var response = await httpClient.PostAsync(
-                string.Format(url, "417291C5E5EADD9A", order.Id, false), // 第一个参数，请求地址
+                string.Format(url, "8E838D9826FD7B50", order.Id, false), // 第一个参数，请求地址
                 null // 第二个参数，请求主体
                 );
 

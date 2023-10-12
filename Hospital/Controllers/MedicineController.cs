@@ -35,6 +35,10 @@ namespace Hospital.Controllers
             [FromQuery] string keyWord    
         )
         {
+            if (keyWord == "" || keyWord == null)
+            {
+                return NotFound();
+            }
             var count = await _resourceRepository.CountMedinesAsync(keyWord);
             if (count == 0)
             {

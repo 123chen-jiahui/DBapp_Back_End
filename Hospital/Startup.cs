@@ -38,14 +38,17 @@ namespace Hospital
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    var secretByte = Encoding.UTF8.GetBytes(Configuration["Authentication:SecretKey"]);
+                    var secretByte = Encoding.UTF8.GetBytes("HelloWorldHelloWorld");
+                    // var secretByte = Encoding.UTF8.GetBytes(Configuration["Authentication:SecretKey"]);
                     options.TokenValidationParameters = new TokenValidationParameters()
                     {
                         ValidateIssuer = true,
-                        ValidIssuer = Configuration["Authentication:Issuer"], // 验证token的发送者，这段表示只有后端fakexiecheng.com发出的token才能被接受
+                        // ValidIssuer = Configuration["Authentication:Issuer"], // 验证token的发送者，这段表示只有后端fakexiecheng.com发出的token才能被接受
+                        ValidIssuer = "TongjiHospital.com",
 
                         ValidateAudience = true,
-                        ValidAudience = Configuration["Authentication:Audience"], // 验证token的持有者
+                        // ValidAudience = Configuration["Authentication:Audience"], // 验证token的持有者
+                        ValidAudience = "TongjiHospital.com",
 
                         ValidateLifetime = true, // 验证token是否过期
 
@@ -80,7 +83,8 @@ namespace Hospital
             });
 
             services.AddDbContext<AppDbContext>(option => {
-                option.UseOracle(Configuration["DbContext:ConnectionString"]);
+                // option.UseOracle(Configuration["DbContext:ConnectionString"]);
+                option.UseOracle("User Id=CJH;Password=123456;Data Source=121.5.128.97:1521/lhrcdb1;");
                 // option.UseOracle("User Id=SYSTEM;Password=Cjh010315;Data Source=localhost/orcl;");
             });
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();

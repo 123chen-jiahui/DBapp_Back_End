@@ -52,7 +52,15 @@ namespace Hospital.Controllers
             BreakState state = BreakState.waitForApproval;
             DateTime fromTime = breakForCreationDto.FromTime;
             DateTime toTime = breakForCreationDto.ToTime;
+            if (fromTime >= toTime)
+            {
+                return BadRequest("开始时间不能晚于结束时间");
+            }
             string reason = breakForCreationDto.Reason;
+            if (reason == null)
+            {
+                return BadRequest("缺少请假理由");
+            }
             var admin=await _userRepository.GetAdminByAsync();
 
             var breakk = new Break()            //break有歧义所以用breakk
@@ -104,6 +112,10 @@ namespace Hospital.Controllers
         {
             // 保存数据
             var breakk=await _affairsRepository.GetBreakByIdAsync(breakApproveDto.Id);
+            if (breakk == null)
+            {
+                return NotFound("");
+            }
             breakk.State = breakApproveDto.State;
             await _affairsRepository.SaveAsync();
             return Ok();
